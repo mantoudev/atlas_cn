@@ -1,17 +1,20 @@
 # 05.术语
-Atlas的术语表(Glossary)提供了一些适当的“单词”，这些“单词”能彼此进行关连和分类，以便业务用户在使用的时候，即使在不同的上下文中也能很好的理解它们。此外，这些术语也是可以映射到数据资产中的，比如：数据库，表，列等。
+
+Atlas的术语表\(Glossary\)提供了一些适当的“单词”，这些“单词”能彼此进行关连和分类，以便业务用户在使用的时候，即使在不同的上下文中也能很好的理解它们。此外，这些术语也是可以映射到数据资产中的，比如：数据库，表，列等。
 
 术语表抽象出了和数据相关的专业术语，使得用户能以他们更熟悉的方式去查找和使用数据。
 
-### 术语表功能
-- 能够使用自然语言（技术术语和/或业务术语）定义丰富的术语词汇表。
-- 能够将术语在语义上相互关联。
-- 能够将资产映射到术语表中。
-- 能够按类别划分这些术语。这为术语增加了更多的上下文。
-- 允许按层次结构排列类别，能展示更广泛和更精细的范围。
-- 从元数据中独立管理术语表。
+## 术语表功能
 
-### 术语(Term)
+* 能够使用自然语言（技术术语和/或业务术语）定义丰富的术语词汇表。
+* 能够将术语在语义上相互关联。
+* 能够将资产映射到术语表中。
+* 能够按类别划分这些术语。这为术语增加了更多的上下文。
+* 允许按层次结构排列类别，能展示更广泛和更精细的范围。
+* 从元数据中独立管理术语表。
+
+## 术语\(Term\)
+
 对于企业来说术语作用的非常大的。对于有用且有意义的术语，需要围绕其用途和上下文进行分组。 Apache Atlas中的术语必须具有唯一的qualifiedName，可以有相同名称的术语，但它们不能属于同一个术语表。具有相同名称的术语只能存在于不同的术语表中。
 
 术语名称可以包含空格，下划线和短划线（作为引用单词的自然方式）但不包含“。”或“@”，因为qualifiedName的格式为：`<术语>@<术语限定名>`。限定名称可以更轻松地使用特定术语。
@@ -20,144 +23,148 @@ Atlas的术语表(Glossary)提供了一些适当的“单词”，这些“单�
 
 可以在Apache Atlas中为一个或多个实体分配/链接一个术语。可以使用分类（`classifications`，类似标签的作用）对术语进行分类，并将相同的分类应用于分配术语的实体。
 
-### 类别(Category)
+## 类别\(Category\)
+
 类别是组织术语的一种方式，以便可以丰富术语的上下文。
 
 类别可能包含也可能不包含层次结构，即子类别层次结构。类别的qualifiedName是使用它在术语表中的分层位置导出的，例如:`<类别名称>.<父类别限定名>`。当发生任何层级更改时，此限定名称都会更新，例如：添加父类别，删除父类别或更改父类别。
 
-### Atlas Web UI
+## Atlas Web UI
+
 Apache Atlas UI提供了友好的用户界面，可以使用术语表相关的功能，其中包括：
-- 创建术语表，术语和类别
-- 在术语之间创建各种关系: synonymns(同义词)，antonymns(反义词)，seeAlso(参考)
-- 调整类别的层次结构中
-- 为实体分配实体(entities)
-- 使用关联术语搜索实体
+
+* 创建术语表，术语和类别
+* 在术语之间创建各种关系: synonymns\(同义词\)，antonymns\(反义词\)，seeAlso\(参考\)
+* 调整类别的层次结构中
+* 为实体分配实体\(entities\)
+* 使用关联术语搜索实体
 
 与术语表相关的UI都可以在`GLOSSARY`的Tab下找到。
 
-#### Glossary tab
+### Glossary tab
+
 Apache Atlas UI提供了两种使用术语表的方法: `术语(Terms)视图`和`类别(Category)视图`。
 
-##### (1) 术语视图(Terms)
+#### \(1\) 术语视图\(Terms\)
+
 术语视图允许用户执行以下操作：
 
-- 创建，更新和删除术语
-- 添加，删除和更新与术语关联的分类
-- 添加，删除和更新术语的分类
-- 在术语之间创建各种关系
-- 查看与术语关联的实体
+* 创建，更新和删除术语
+* 添加，删除和更新与术语关联的分类
+* 添加，删除和更新术语的分类
+* 在术语之间创建各种关系
+* 查看与术语关联的实体
 
-##### (2) 类别视图(Category)
+#### \(2\) 类别视图\(Category\)
+
 类别视图允许用户执行以下操作：
 
-- 创建，更新和删除类别和子类别
-- 将术语与类别相关联
+* 创建，更新和删除类别和子类别
+* 将术语与类别相关联
 
-用户可以使用术语表选项卡中提供的切换在术语视图和类别视图之间切换。
-![术语视图](https://atlas.apache.org/images/markdown/terms_view.png)
+用户可以使用术语表选项卡中提供的切换在术语视图和类别视图之间切换。 ![&#x672F;&#x8BED;&#x89C6;&#x56FE;](https://atlas.apache.org/images/markdown/terms_view.png)
 
-![分类视图](https://atlas.apache.org/images/markdown/category_view_1.png)
+![&#x5206;&#x7C7B;&#x89C6;&#x56FE;](https://atlas.apache.org/images/markdown/category_view_1.png)
 
-####  术语菜单(Terms)
-- 创建一个新术语  
-单击术语表名称旁边的省略号（...）会显示一个弹出式菜单，允许用户在术语表中创建术语或删除术语表 - 如下所示。
-![创建术语](https://atlas.apache.org/images/markdown/term_view_context.png)
+### 术语菜单\(Terms\)
 
-- 删除一个术语  
-单击术语名称旁边的省略号（...）会显示一个弹出式菜单，允许用户删除该术语 - 如下所示。
-![删除术语](https://atlas.apache.org/images/markdown/term_delete_context.png)
+* 创建一个新术语 单击术语表名称旁边的省略号（...）会显示一个弹出式菜单，允许用户在术语表中创建术语或删除术语表 - 如下所示。 ![&#x521B;&#x5EFA;&#x672F;&#x8BED;](https://atlas.apache.org/images/markdown/term_view_context.png)
+* 删除一个术语 单击术语名称旁边的省略号（...）会显示一个弹出式菜单，允许用户删除该术语 - 如下所示。 ![&#x5220;&#x9664;&#x672F;&#x8BED;](https://atlas.apache.org/images/markdown/term_delete_context.png)
 
-##### 术语详情
+#### 术语详情
+
 选择术语表UI中的术语，可以查看对应术语的各种详细信息。详细信息页面下的每个选项卡提供该术语的不同详细信息。
 
-- `Entities(实体)`选项卡：显示分配给所选术语的实体
-- `Classifications(分类)`选项卡：显示与所选术语关联的分类
-- `Related terms (相关术语)`选项卡：显示与所选术语相关的术语
-![术语详情](https://atlas.apache.org/images/markdown/term_details.png)
+* `Entities(实体)`选项卡：显示分配给所选术语的实体
+* `Classifications(分类)`选项卡：显示与所选术语关联的分类
+* `Related terms (相关术语)`选项卡：显示与所选术语相关的术语
 
-##### 给术语添加分类(classification)
-单击分类标签旁边的`+`可为术语添加分类。
-![添加分类1](https://atlas.apache.org/images/markdown/term_add_classification_1.png)
+  ![&#x672F;&#x8BED;&#x8BE6;&#x60C5;](https://atlas.apache.org/images/markdown/term_details.png)
 
-![添加分类2](https://atlas.apache.org/images/markdown/term_add_classification_2.png)
+#### 给术语添加分类\(classification\)
 
-![添加分类3](https://atlas.apache.org/images/markdown/term_with_classification.png)
+单击分类标签旁边的`+`可为术语添加分类。 ![&#x6DFB;&#x52A0;&#x5206;&#x7C7B;1](https://atlas.apache.org/images/markdown/term_add_classification_1.png)
 
-##### 与其他术语建立术语关联
-查看术语详细信息时，单击`Related Terms(相关术语)`选项卡。单击`+`将术语与当前术语链接。
-![关联](https://atlas.apache.org/images/markdown/terms_related_terms.png)
+![&#x6DFB;&#x52A0;&#x5206;&#x7C7B;2](https://atlas.apache.org/images/markdown/term_add_classification_2.png)
 
-##### 对术语进行分类
-单击类别标签旁边的`+`可对术语进行分类。将提供模态对话框以选择类别。
-![分类](https://atlas.apache.org/images/markdown/term_add_category.png)
+![&#x6DFB;&#x52A0;&#x5206;&#x7C7B;3](https://atlas.apache.org/images/markdown/term_with_classification.png)
 
-#### 类别视图(Category)
+#### 与其他术语建立术语关联
+
+查看术语详细信息时，单击`Related Terms(相关术语)`选项卡。单击`+`将术语与当前术语链接。 ![&#x5173;&#x8054;](https://atlas.apache.org/images/markdown/terms_related_terms.png)
+
+#### 对术语进行分类
+
+单击类别标签旁边的`+`可对术语进行分类。将提供模态对话框以选择类别。 ![&#x5206;&#x7C7B;](https://atlas.apache.org/images/markdown/term_add_category.png)
+
+### 类别视图\(Category\)
+
 当切换开关处于`Category`时，左侧面板将列出所有术语表以及类别层次结构。
 
 ![image](https://atlas.apache.org/images/markdown/category_view_2.png)
 
-##### 类别菜单(Category)
+#### 类别菜单\(Category\)
+
 单击`Category`旁边的省略号`...`将显示类别上下文菜单。
 
-- 创建新类别
-![创建类别](https://atlas.apache.org/images/markdown/category_view_glossary_context.png)
+* 创建新类别 ![&#x521B;&#x5EFA;&#x7C7B;&#x522B;](https://atlas.apache.org/images/markdown/category_view_glossary_context.png)
+* 创建子类别或删除类别 ![&#x521B;&#x5EFA;/&#x5220;&#x9664;&#x5B50;&#x7C7B;&#x522B;](https://atlas.apache.org/images/markdown/category_view_category_context_1.png)
 
-- 创建子类别或删除类别
-![创建/删除子类别](https://atlas.apache.org/images/markdown/category_view_category_context_1.png)
+### 类别详情
 
-#### 类别详情
 选择`Category`后，详细信息将显示在右侧窗口中。
 
-![分类详情](https://atlas.apache.org/images/markdown/category_details_with_terms.png)
+![&#x5206;&#x7C7B;&#x8BE6;&#x60C5;](https://atlas.apache.org/images/markdown/category_details_with_terms.png)
 
-##### 术语分类
+#### 术语分类
+
 单击详情页中`Terms`标签旁边的`+`链接所选类别下的术语。
 
-![术语分类1](https://atlas.apache.org/images/markdown/category_add_term.png)
+![&#x672F;&#x8BED;&#x5206;&#x7C7B;1](https://atlas.apache.org/images/markdown/category_add_term.png)
 
-![术语分类2](https://atlas.apache.org/images/markdown/category_add_term_1.png)
+![&#x672F;&#x8BED;&#x5206;&#x7C7B;2](https://atlas.apache.org/images/markdown/category_add_term_1.png)
 
-![术语分类3](https://atlas.apache.org/images/markdown/category_add_term_2.png)
+![&#x672F;&#x8BED;&#x5206;&#x7C7B;3](https://atlas.apache.org/images/markdown/category_add_term_2.png)
 
-#### 术语分配流程
+### 术语分配流程
+
 可以在搜索结果页和`Glossary-Terms`实体详情页中给`entity(实体)`分配术语。
 
-##### 分配术语  
+#### 分配术语
+
 在搜索结果页面，点击`terms`列下的`+`
 
-![分配术语1](https://atlas.apache.org/images/markdown/entity_search_add_term.png)
+![&#x5206;&#x914D;&#x672F;&#x8BED;1](https://atlas.apache.org/images/markdown/entity_search_add_term.png)
 
+点击`terms`标签旁边的`+` ![&#x5206;&#x914D;&#x672F;&#x8BED;2](https://atlas.apache.org/images/markdown/entity_details_add_term.png)
 
-点击`terms`标签旁边的`+`
-![分配术语2](https://atlas.apache.org/images/markdown/entity_details_add_term.png)
+这两个操作都将显示下面的结果，按照屏幕上的提示完成术语分配。 ![&#x5B8C;&#x6210;&#x672F;&#x8BED;&#x5206;&#x914D;](https://atlas.apache.org/images/markdown/entity_add_term_modal.png)
 
+#### 分类传播\(Propagated classification\)
 
-这两个操作都将显示下面的结果，按照屏幕上的提示完成术语分配。
-![完成术语分配](https://atlas.apache.org/images/markdown/entity_add_term_modal.png)
-
-
-##### 分类传播(Propagated classification)
 如果一个术语具有分类，则该术语下的实体继承相同的分类。
 
 ![image](https://atlas.apache.org/images/markdown/term_details_with_classification.png)
 
 ![image](https://atlas.apache.org/images/markdown/entity_assigned_term_with_tag.png)
 
-#### 使用术语搜索
+### 使用术语搜索
+
 Apache Atlas基本搜索API和UI已更新，以支持术语作为搜索条件。允许用户查找与给定术语相关联的实体。
 
-![搜索](https://atlas.apache.org/images/markdown/term_search.png)
+![&#x641C;&#x7D22;](https://atlas.apache.org/images/markdown/term_search.png)
 
-### REST API
+## REST API
+
 Atlas支持以下操作，可在[这里](https://atlas.apache.org/1.1.0/api/v2/index.html)找到REST接口的详细信息。
 
-![Glossary REST API](https://s1.ax1x.com/2018/11/15/ivYkdI.png)
-![Glossary REST API](https://s1.ax1x.com/2018/11/15/ivYVFP.png)
+![Glossary REST API](https://s1.ax1x.com/2018/11/15/ivYkdI.png) ![Glossary REST API](https://s1.ax1x.com/2018/11/15/ivYVFP.png)
 
-##### JSON结构
-- Glossary
+#### JSON结构
 
-```
+* Glossary
+
+```text
 {
     "guid": "2f341934-f18c-48b3-aa12-eaa0a2bfce85",
     "qualifiedName": "SampleBank",
@@ -201,9 +208,10 @@ Atlas支持以下操作，可在[这里](https://atlas.apache.org/1.1.0/api/v2/i
     }]
 }
 ```
-- Term
 
-```
+* Term
+
+```text
 {
     "guid": "e441a540-ee55-4fc8-8eaf-4b9943d8929c",
     "qualifiedName": "fixed_mtg@SampleBank",
@@ -238,9 +246,9 @@ Atlas支持以下操作，可在[这里](https://atlas.apache.org/1.1.0/api/v2/i
 }
 ```
 
-- Category
+* Category
 
-```
+```text
 {
     "guid": "7f041401-de8c-443f-a3b7-7bf5a910ff6f",
     "qualifiedName": "Loans.Customer@HortoniaBank",
@@ -266,7 +274,9 @@ Atlas支持以下操作，可在[这里](https://atlas.apache.org/1.1.0/api/v2/i
     }]
 }
 ```
-##### 创建操作(CREATE)
+
+#### 创建操作\(CREATE\)
+
 1. 创建术语表
 2. 创建一个术语
 3. 创建分类术语
@@ -277,12 +287,14 @@ Atlas支持以下操作，可在[这里](https://atlas.apache.org/1.1.0/api/v2/i
 8. 为实体分配术语
 
 **注意：**
-- 在创建操作期间，术语表，术语和类别将获得自动分配的GUID和qualifiedName。
-- 要创建包含子项的类别，必须事先创建子项。
-- 要创建属于某个类别的术语，必须事先创建该类别。
-- 要创建关系术语，必须事先创建相关术语。
 
-##### 读操作(READ)
+* 在创建操作期间，术语表，术语和类别将获得自动分配的GUID和qualifiedName。
+* 要创建包含子项的类别，必须事先创建子项。
+* 要创建属于某个类别的术语，必须事先创建该类别。
+* 要创建关系术语，必须事先创建相关术语。
+
+#### 读操作\(READ\)
+
 1. 通过GUID获取术语表 - 提供属于术语表的所有术语和类别（标题）。  
 2. 获取所有术语表 - 为所有术语表提供他们的术语和类别（标题）。  
 3. 通过GUID获取术语 - 提供有关术语，其所属类别（如果有）以及任何相关术语的详细信息。
@@ -293,7 +305,8 @@ Atlas支持以下操作，可在[这里](https://atlas.apache.org/1.1.0/api/v2/i
 8. 获取与给定类别（父母和子女）相关的所有类别
 9. 获取给定类别的所有条款
 
-##### 更新操作(UPDATE)
+#### 更新操作\(UPDATE\)
+
 1. 局部更新术语表
 2. 局部更新术语
 3. 局部更新类别
@@ -302,14 +315,17 @@ Atlas支持以下操作，可在[这里](https://atlas.apache.org/1.1.0/api/v2/i
 6. 更新给定的类别
 
 **注意：**
-- 局部更新仅处理词汇表模型文件中定义的**原始属性**。
-- 分配后，无法更改GUID和qualifiedName。唯一的方法是删除并重新创建所需的对象。
-- 在任何更新中都无法删除**锚点**
-- 更新API期望在GET调用之后就地修改JSON。任何缺失的属性/关系都将被删除。
-- 对类别层次结构的任何更新都会导致对其下的层次结构进行级联更新，例如锚更改会影响所有子项，父项更改会影响self和children的qualifiedName。
 
-##### 删除操作(DELETE)
+* 局部更新仅处理词汇表模型文件中定义的**原始属性**。
+* 分配后，无法更改GUID和qualifiedName。唯一的方法是删除并重新创建所需的对象。
+* 在任何更新中都无法删除**锚点**
+* 更新API期望在GET调用之后就地修改JSON。任何缺失的属性/关系都将被删除。
+* 对类别层次结构的任何更新都会导致对其下的层次结构进行级联更新，例如锚更改会影响所有子项，父项更改会影响self和children的qualifiedName。
+
+#### 删除操作\(DELETE\)
+
 1. 删除术语表 - 删除锚定到给定词汇表的所有类别和术语。如果已为实体分配任何术语，则会阻止此删除。
 2. 删除术语 - 仅当术语未与任何实体关联/分配时才删除该术语。
 3. 删除类别 - 仅删除给定类别，所有子项都成为顶级类别。
 4. 从实体中删除术语分配
+

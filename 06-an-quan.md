@@ -1,0 +1,251 @@
+# 06.安全
+
+## 概述
+
+以下功能可用于增强平台的安全性：
+
+* SSL
+* 服务认证
+* 基于SPNEGO的HTTP身份验证
+
+### SSL
+
+支持SSL单向（服务器身份验证）和双向（服务器和客户端身份验证）。以下应用程序属性（atlas-application.properties文件中配置的属性）可用于配置SSL：
+
+* `atlas.enableTLS`（false \| true）\[default：false\]:  启用/禁用SSL侦听器。
+* `keystore.file`:  服务器利用的密钥库文件的路径。该文件包含服务器证书。
+* `truststore.file`:  信任库文件的路径。此文件包含其他可信实体的证书（例如，如果启用了双向SSL，则为客户端进程的证书）。在大多数情况下，可以将其设置为与keystore.file属性相同的值（特别是如果启用了单向SSL）。
+* `client.auth.enabled`（false \| true）\[default：false\]:  启用/禁用客户端身份验证。如果启用，客户端将必须在传输会话密钥创建过程期间向服务器进行身份验证（即双向SSL有效）。
+* `cert.stores.credential.provider.path`:  凭据提供程序存储文件的路径。密钥库，信任库和服务器证书的密码在此安全文件中维护。利用'bin'nirectoy中的cputil脚本（见下文），用所需的密码填充此文件。
+* `atlas.ssl.exclude.cipher.suites`: 排除的密码套件列表 -  NULL.,._RC4._,._MD5._,. _DES._,. _DSS._是弱且不安全的密码套件默认排除。如果需要排除其他密码，请使用默认的密码套件设置此属性，例如atlas.ssl.exclude.cipher.suites =._NULL._,. _RC4._,._MD5._,._DES._,._DSS._ DSS。\*，并使用逗号分隔符将其他Ciper Suites添加到列表中。可以使用其全名或正则表达式添加它们。 - - - atlas.ssl.exclude.cipher.suites属性中列出的密码套件将优先于默认的密码套件。一个人会保留默认的密码套件，并添加额外的密码套件以确保安全。
+
+#### 凭据提供实用脚本
+
+为了防止使用明文密码，Atlas使用Credential Provider工具进行安全密码存储（有关此工具的更多信息，请参阅 [Hadoop凭据命令参考](http://hadoop.apache.org/docs/current/hadoop-project-dist/hadoop-common/CommandsManual.html#credential) ）。可以利用'bin'目录中的cputil脚本来创建所需的密码存储。
+
+要为Atlas创建凭据提供程序：
+
+* cd到'bin'目录
+* 输入`./cputil.py`
+* 输入生成的凭据提供程序的路径。路径的格式为：
+  * [jceks：//file/local/file/path/file.jceks](jceks://file/local/file/path/file.jceks)  或  [jceks://hdfs@namenodehost：port/path/in/hdfs/to/ file.jceks](jceks://hdfs@namenodehost:port/path/in/hdfs/to/file.jceks.)。这些文件通常使用“.jceks”扩展名（例如test.jceks）
+* 输入密钥库、信任库和服务器密钥的密码（这些密码需要与用于实际创建关联证书存储文件的密码相匹配）。
+
+将生成凭证提供程序并将其保存到提供的路径中。
+
+### 服务认证
+
+Atlas平台在启动时与经过身份验证的身份相关联。默认情况下，在不安全的环境中，该标识与启动服务器的OS身份验证用户相同。但是，在利用kerberos的安全集群中，最佳做法是配置密钥表和主体，以便平台对KDC进行身份验证。这允许服务随后与其他安全集群服务（例如HDFS）交互。
+
+配置服务身份验证的属性包括：
+
+* `atlas.authentication.method`（simple \| kerberos）\[default：simple\]: 要使用的身份验证方法。 Simple将利用OS身份验证身份并且是默认机制。 'kerberos'表示该服务需要使用已配置的密钥表和主体对KDC进行身份验证。
+* `atlas.authentication.keytab`: keytab文件的路径。
+* `atlas.authentication.principal`:  用于向KDC进行身份验证的主体。主体通常是“user / host @ realm”形式。您可以使用'\_HOST'标记作为主机名，本地主机名将由运行时替换（例如“Atlas/\_HOST@EXAMPLE.COM”）。
+
+  请注意，当Atlas配置了HBase作为安全集群中的存储后端时，图形db（JanusGraph）需要足够的用户权限才能创建和访问HBase表。要授予适当的权限，请参阅 [图形持久性引擎-Hbase](https://atlas.apache.org/Configuration.html)。
+
+### JAAS 配置
+
+在安全集群中，Atlas与之交互的一些组件（例如Kafka）需要Atlas使用JAAS向他们进行身份验证。以下属性用于设置适当的JAAS配置。
+
+* atlas.jaas.client-id.loginModuleName - the authentication method used by the component \(for example, com.sun.security.auth.module.Krb5LoginModule\)
+* atlas.jaas.client-id.loginModuleControlFlag-  \(required\|requisite\|sufficient\|optional\) \[default: required\]
+* atlas.jaas.client-id.option.useKeyTab \(true\|false\)
+* atlas.jaas.client-id.option.storeKey \(true \| false\)
+* atlas.jaas.client-id.option.serviceName - service name of server component
+* atlas.jaas.client-id.option.keyTab = 
+* atlas.jaas.client-id.option.principal = 
+
+例如，jaas-application.properties文件中的以下属性设置：
+
+```text
+atlas.jaas.KafkaClient.loginModuleName = com.sun.security.auth.module.Krb5LoginModule
+atlas.jaas.KafkaClient.loginModuleControlFlag = required
+atlas.jaas.KafkaClient.option.useKeyTab = true
+atlas.jaas.KafkaClient.option.storeKey = true
+atlas.jaas.KafkaClient.option.serviceName = kafka
+atlas.jaas.KafkaClient.option.keyTab = /etc/security/keytabs/kafka_client.keytab
+atlas.jaas.KafkaClient.option.principal = kafka-client-1@EXAMPLE.COM
+
+atlas.jaas.MyClient.0.loginModuleName = com.sun.security.auth.module.Krb5LoginModule
+atlas.jaas.MyClient.0.loginModuleControlFlag = required
+atlas.jaas.MyClient.0.option.useKeyTab = true
+atlas.jaas.MyClient.0.option.storeKey = true
+atlas.jaas.MyClient.0.option.serviceName = kafka
+atlas.jaas.MyClient.0.option.keyTab = /etc/security/keytabs/kafka_client.keytab
+atlas.jaas.MyClient.0.option.principal = kafka-client-1@EXAMPLE.COM
+
+atlas.jaas.MyClient.1.loginModuleName = com.sun.security.auth.module.Krb5LoginModule
+atlas.jaas.MyClient.1.loginModuleControlFlag = optional
+atlas.jaas.MyClient.1.option.useKeyTab = true
+atlas.jaas.MyClient.1.option.storeKey = true
+atlas.jaas.MyClient.1.option.serviceName = kafka
+atlas.jaas.MyClient.1.option.keyTab = /etc/security/keytabs/kafka_client.keytab
+atlas.jaas.MyClient.1.option.principal = kafka-client-1@EXAMPLE.COM
+```
+
+该配置等同于以下jaas.conf文件条目：
+
+```text
+KafkaClient {
+    com.sun.security.auth.module.Krb5LoginModule required
+    useKeyTab=true
+    storeKey=true
+    serviceName=kafka
+    keyTab="/etc/security/keytabs/kafka_client.keytab"
+    principal="kafka-client-1@EXAMPLE.COM";
+};
+MyClient {
+    com.sun.security.auth.module.Krb5LoginModule required
+    useKeyTab=true
+    storeKey=true
+    serviceName=kafka keyTab="/etc/security/keytabs/kafka_client.keytab"
+    principal="kafka-client-1@EXAMPLE.COM";
+};
+MyClient {
+    com.sun.security.auth.module.Krb5LoginModule optional
+    useKeyTab=true
+    storeKey=true
+    serviceName=kafka
+    keyTab="/etc/security/keytabs/kafka_client.keytab"
+    principal="kafka-client-1@EXAMPLE.COM";
+};
+```
+
+### 基于SPNEGO的HTTP身份验证
+
+通过启用平台的SPNEGO支持，可以保护对Atlas平台的HTTP访问。目前有两种支持的身份验证机制：
+
+* `Simple`：通过提供的用户名执行身份验证。
+* `Kerberos` ：利用客户端的KDC身份验证身份对服务器进行身份验证。
+
+Kerberos支持要求访问服务器的客户端首先向KDC进行身份验证（通常这是通过'kinit'命令完成的）。一旦经过身份验证，用户就可以访问服务器（身份验证是通过SPNEGO协商机制与服务器交互）。
+
+配置SPNEGO支持的属性包括：
+
+* `atlas.http.authentication.enabled`（true \| false）\[default：false\]：是否启用HTTP身份验证的属性
+* `atlas.http.authentication.type`（simple \| kerberos）\[default：simple\]: 身份验证类型
+* `atlas.http.authentication.kerberos.principal`:  Web应用程序Kerberos主体名称。 Kerberos主体名称必须以“HTTP / ...”开头。例如：“HTTP / localhost @ LOCALHOST”。没有默认值。
+* \`atlas.http.authentication.kerberos.keytab  - 包含kerberos主体凭据的keytab文件的路径。
+* `atlas.rest.address`: ：// ：
+
+有关HTTP身份验证机制的更详细讨论，请参阅 [Hadoop Auth，Java HTTP SPNEGO 2.6.0 - 服务器端配置](http://hadoop.apache.org/docs/stable/hadoop-auth/Configuration.html)。在Atlas身份验证实现的情况下，文档引用的前缀是`atlas.http.authentication`。
+
+#### 客户端安全配置
+
+当Atlas客户端通过代码，使用SSL传输和/或Kerberos身份验证方式与Atlas服务端通信时，需要提供Atlas客户端配置文件，该文件提供允许与服务器通信或进行身份验证的安全属性。使用适当的设置更新atlas-application.properties文件（参见下文），并将其复制到客户端的类路径或“atlas.conf”系统属性指定的目录。
+
+SSL通信相关的客户端属性有：
+
+* `atlas.enableTLS`（false \| true）\[default：false\]:  启用/禁用SSL客户端通信基础结构。
+* `keystore.file`:  客户端利用的密钥库文件的路径。仅当在服务器上启用了双向SSL并且包含客户端证书时，才需要此文件。
+* `truststore.file`:  信任库文件的路径。此文件包含可信实体的证书（例如，服务器或共享证书颁发机构的证书）。单向或双向SSL都需要此文件。
+* `cert.stores.credential.provider.path`:  凭据提供程序存储文件的路径。密钥库，信任库和客户端证书的密码在此安全文件中维护。
+
+  验证服务器所需的属性（如果启用了身份验证）：
+
+* `atlas.http.authentication.type`（simple \| kerberos）\[default：simple\]: 身份验证类型
+
+#### SOLR Kerberos 配置
+
+如果指定的身份验证类型为“kerberos”，则将访问kerberos票证缓存以向服务器进行身份验证（因此，客户端需要在使用“kinit”或类似机制与服务器通信之前向KDC进行身份验证）。
+
+参考 [the Apache SOLR Kerberos configuration](https://cwiki.apache.org/confluence/display/RANGER/How+to+configure+Solr+Cloud+with+Kerberos+for+Ranger+0.5)
+
+* 添加主体并生成solr的keytab文件。为每个要运行Solr的主机为每个主机创建一个keytab文件，并将主体名称与主机一起使用（例如: `addprinc -randkey solr/${HOST1}@EXAMPLE.COM`。将$ {HOST1}替换为实际的主机名）。
+
+```text
+   kadmin.local
+   kadmin.local:  addprinc -randkey solr/<hostname>@EXAMPLE.COM
+   kadmin.local:  xst -k solr.keytab solr/<hostname>@EXAMPLE.COM
+   kadmin.local:  quit
+```
+
+* 添加主体并生成用于验证HTTP请求的keytab文件。 （请注意，如果Ambari用于Kerberize集群，则可以使用keytab `/etc/security/keytabs/spnego.service.keytab`）
+
+```text
+   kadmin.local
+   kadmin.local:  addprinc -randkey HTTP/<hostname>@EXAMPLE.COM
+   kadmin.local:  xst -k HTTP.keytab HTTP/<hostname>@EXAMPLE.COM
+   kadmin.local:  quit
+```
+
+* 将keytab文件复制到运行Solr的所有主机。
+
+```text
+   cp solr.keytab /etc/security/keytabs/
+   chmod 400 /etc/security/keytabs/solr.keytab
+
+   cp HTTP.keytab /etc/security/keytabs/
+   chmod 400 /etc/security/keytabs/HTTP.keytab
+```
+
+* 在Zookeeper中创建路径以存储Solr配置和其他参数。
+
+  ```text
+  $SOLR_INSTALL_HOME/server/scripts/cloud-scripts/zkcli.sh -zkhost $ZK_HOST:2181 -cmd makepath solr
+  ```
+
+* 将配置上传到Zookeeper
+
+```text
+ $SOLR_INSTALL_HOME/server/scripts/cloud-scripts/zkcli.sh -cmd upconfig  -zkhost $ZK_HOST:2181/solr -confname basic_configs -confdir $SOLR_INSTALL_HOME/server/solr/configsets/basic_configs/conf
+```
+
+* 创建JAAS配置
+
+```text
+  vi /etc/solr/conf/solr_jaas.conf
+
+   Client {
+     com.sun.security.auth.module.Krb5LoginModule required
+     useKeyTab=true
+     keyTab="/etc/security/keytabs/solr.keytab"
+     storeKey=true
+     useTicketCache=true
+     debug=true
+     principal="solr/<hostname>@EXAMPLE.COM";
+   };
+```
+
+* 将`/etc/solr/conf/solr_jaas.conf`复制到运行Solr的所有主机。
+* 在`$SOLR_INSTALL_HOME/bin/`中编辑`solr.in.sh`
+
+```text
+vi $SOLR_INSTALL_HOME/bin/solr.in.sh
+
+   SOLR_JAAS_FILE=/etc/solr/conf/solr_jaas.conf
+   SOLR_HOST=`hostname -f`
+   ZK_HOST="$ZK_HOST1:2181,$ZK_HOST2:2181,$ZK_HOST3:2181/solr"
+   KERBEROS_REALM="EXAMPLE.COM"
+   SOLR_KEYTAB=/etc/solr/conf/solr.keytab
+   SOLR_KERB_PRINCIPAL=HTTP@${KERBEROS_REALM}
+   SOLR_KERB_KEYTAB=/etc/solr/conf/HTTP.keytab
+   SOLR_AUTHENTICATION_CLIENT_CONFIGURER="org.apache.solr.client.solrj.impl.Krb5HttpClientConfigurer"
+   SOLR_AUTHENTICATION_OPTS=" -DauthenticationPlugin=org.apache.solr.security.KerberosPlugin -Djava.security.auth.login.config=${SOLR_JAAS_FILE} -Dsolr.kerberos.principal=${SOLR_KERB_PRINCIPAL} -Dsolr.kerberos.keytab=${SOLR_KERB_KEYTAB} -Dsolr.kerberos.cookie.domain=${SOLR_HOST} -Dhost=${SOLR_HOST} -Dsolr.kerberos.name.rules=DEFAULT"
+```
+
+* 将solr.in.sh复制到运行Solr的所有主机。
+* 设置Solr以通过上传`security.json`来使用Kerberos插件。
+
+```text
+   $SOLR_INSTALL_HOME/server/scripts/cloud-scripts/zkcli.sh -zkhost <zk host>:2181 -cmd put /security.json '{"authentication":{"class": "org.apache.solr.security.KerberosPlugin"}}'
+```
+
+* 启动Solr:
+
+  \`\`\`
+
+   $SOLR\_INSTALL\_HOME/bin/solr start -cloud -z $ZK\_HOST1:2181,$ZK\_HOST2:2181,$ZK\_HOST3:2181 -noprompt
+
+```text
+- 测试Solr:
+```
+
+kinit -k -t /etc/security/keytabs/HTTP.keytab HTTP/&lt;host&gt;@EXAMPLE.COM curl --negotiate -u : "http://:8983/solr/"
+
+\`\`\`
+
+* 在Solr中创建与Atlas使用的索引相对应的集合，并将Atlas配置更改为指向Solr实例设置，参考此处 [安装步骤](https://atlas.apache.org/InstallationSteps.html)。
+
