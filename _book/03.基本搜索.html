@@ -1,0 +1,707 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>03-基本搜索 · Mantou Book</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="mantou">
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+
+        
+    
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="02.类型系统.html" />
+    
+
+    
+        <link rel="shortcut icon" href='source/images/favicon.jpg' type="image/x-icon">
+    
+    
+        <link rel="bookmark" href='source/images/favicon.jpg' type="image/x-icon">
+    
+    
+        <link rel="apple-touch-icon" href='source/images/apple-touch-icon.jpg'>
+    
+    
+        
+        <link rel="apple-touch-icon" sizes="120x120" href="source/images/apple-touch-icon.jpg">
+        
+        <link rel="apple-touch-icon" sizes="180x180" href="source/images/apple-touch-icon.jpg">
+        
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"mantou","repo":"atlas_cn","type":"star","size":"small","count":true}]};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://mantoudev.com" target="_blank" class="custom-link">MantouDev</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="01.高级架构.html">
+            
+                <a href="01.高级架构.html">
+            
+                    
+                    01-高级架构​
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="02.类型系统.html">
+            
+                <a href="02.类型系统.html">
+            
+                    
+                    02-类型系统​
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4" data-path="03.基本搜索.html">
+            
+                <a href="03.基本搜索.html">
+            
+                    
+                    03-基本搜索
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    04-高级搜索✘
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="05.术语.html">
+            
+                <a href="05.术语.html">
+            
+                    
+                    05-术语表​
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="06.安全.html">
+            
+                <a href="06.安全.html">
+            
+                    
+                    06-安全
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="07.认证.html">
+            
+                <a href="07.认证.html">
+            
+                    
+                    07-认证
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="08.授权模型.html">
+            
+                <a href="08.授权模型.html">
+            
+                    
+                    08-Atlas授权模型
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="8.1 简单授权.html">
+            
+                <a href="8.1 简单授权.html">
+            
+                    
+                    8.1 配置Atlas Simple Authorizer
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="8.2 Ranger授权.html">
+            
+                <a href="8.2 Ranger授权.html">
+            
+                    
+                    8.2 配置Atlas Ranger Authorizer
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="09.分类传播.html">
+            
+                <a href="09.分类传播.html">
+            
+                    
+                    09-分类传播​
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="10.配置Atlas">
+            
+                <span>
+            
+                    
+                    10-配置Atlas属性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="11.通知">
+            
+                <span>
+            
+                    
+                    11-通知
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" >
+            
+                <span>
+            
+                    
+                    12-Hook & Bridge
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1" data-path="12.1 HBase Hook & Bridge.html">
+            
+                <a href="12.1 HBase Hook & Bridge.html">
+            
+                    
+                    12.1 HBase Hook＆Bridge
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.2" >
+            
+                <span>
+            
+                    
+                    12.2 Hive Hook＆Bridge✘
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.3" >
+            
+                <span>
+            
+                    
+                    12.3 Sqoop Hook✘
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.4" >
+            
+                <span>
+            
+                    
+                    12.4 Storm Hook✘
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.5" >
+            
+                <span>
+            
+                    
+                    12.5 Kafka Bridge✘
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" >
+            
+                <span>
+            
+                    
+                    13-容错和高可用性选项✘
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" >
+            
+                <span>
+            
+                    
+                    14-从Apache Atlas 0.8迁移✘
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >03-基本搜索</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#03-&#x57FA;&#x672C;&#x641C;&#x7D22;"><b></b>03. &#x57FA;&#x672C;&#x641C;&#x7D22;</a></li></ul></div><a href="#03-&#x57FA;&#x672C;&#x641C;&#x7D22;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="03-&#x57FA;&#x672C;&#x641C;&#x7D22;"><a name="03-&#x57FA;&#x672C;&#x641C;&#x7D22;" class="anchor-navigation-ex-anchor" href="#03-&#x57FA;&#x672C;&#x641C;&#x7D22;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="03-&#x57FA;&#x672C;&#x641C;&#x7D22;" class="plugin-anchor" href="#03-&#x57FA;&#x672C;&#x641C;&#x7D22;"><i class="fa fa-link" aria-hidden="true"></i></a>03. &#x57FA;&#x672C;&#x641C;&#x7D22;</h1>
+<p>&#x57FA;&#x672C;&#x641C;&#x7D22;&#x5141;&#x8BB8;&#x60A8;&#x4F7F;&#x7528;&#x5B9E;&#x4F53;&#x7684;&#x7C7B;&#x578B;&#x540D;&#x79F0;&#xFF0C;&#x5173;&#x8054;&#x7684;&#x5206;&#x7C7B;/&#x6807;&#x8BB0;&#x8FDB;&#x884C;&#x67E5;&#x8BE2;&#xFF0C;&#x5E76;&#x4E14;&#x652F;&#x6301;&#x5BF9;&#x5B9E;&#x4F53;&#x5C5E;&#x6027;&#x4EE5;&#x53CA;&#x5206;&#x7C7B;/&#x6807;&#x8BB0;&#x5C5E;&#x6027;&#x8FDB;&#x884C;&#x8FC7;&#x6EE4;&#x3002;</p>
+<p>&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x4EE5;&#x4E0B;JSON&#x7ED3;&#x6784;&#xFF08;SearchParameters&#xFF09;&#x8868;&#x793A;&#x6574;&#x4E2A;&#x67E5;&#x8BE2;&#x7ED3;&#x6784;&#xFF1A;</p>
+<pre><code>{
+  &quot;typeName&quot;:               &quot;hive_column&quot;,
+  &quot;excludeDeletedEntities&quot;: true,
+  &quot;classification&quot;:         &quot;PII&quot;,
+  &quot;query&quot;:                  &quot;&quot;,
+  &quot;offset&quot;:                 0,
+  &quot;limit&quot;:                  25,
+  &quot;entityFilters&quot;:          {  },
+  &quot;tagFilters&quot;:             { },
+  &quot;attributes&quot;:             [ &quot;table&quot;, &quot;qualifiedName&quot;]
+}
+</code></pre><p><strong>&#x5B57;&#x6BB5;&#x89E3;&#x91CA;</strong></p>
+<pre><code>   typeName&#xFF1A;                &#x8981;&#x67E5;&#x627E;&#x7684;&#x5B9E;&#x4F53;&#x7C7B;&#x578B;
+   excludeDeletedEntities&#xFF1A;  &#x641C;&#x7D22;&#x662F;&#x5426;&#x5E94;&#x8BE5;&#x6392;&#x9664;&#x5DF2;&#x5220;&#x9664;&#x7684;&#x5B9E;&#x4F53;&#xFF1F; &#xFF08;&#x9ED8;&#x8BA4;&#x503C;&#xFF1A;true&#xFF09;
+   classification&#xFF1A;          &#x4EC5;&#x5305;&#x62EC;&#x5177;&#x6709;&#x7ED9;&#x5B9A;&#x5206;&#x7C7B;&#x7684;&#x5B9E;&#x4F53;
+   query&#xFF1A;                   &#x5B9E;&#x4F53;&#x5E94;&#x5177;&#x6709;&#x7684;&#x4EFB;&#x4F55;&#x81EA;&#x7531;&#x6587;&#x672C;&#x51FA;&#x73B0;&#xFF08;&#x901A;&#x7528;/&#x901A;&#x914D;&#x7B26;&#x67E5;&#x8BE2;&#x53EF;&#x80FD;&#x5F88;&#x6162;&#xFF09;
+   offset&#xFF1A;                  &#x7ED3;&#x679C;&#x96C6;&#x7684;&#x8D77;&#x59CB;&#x504F;&#x79FB;&#x91CF;&#xFF08;&#x5BF9;&#x5206;&#x9875;&#x6709;&#x7528;&#xFF09;
+   limit&#xFF1A;                   &#x8981;&#x83B7;&#x53D6;&#x7684;&#x6700;&#x5927;&#x7ED3;&#x679C;&#x6570;
+   entityFilters&#xFF1A;           &#x5B9E;&#x4F53;&#x5C5E;&#x6027;&#x8FC7;&#x6EE4;&#x5668;
+   tagFilters&#xFF1A;              &#x5206;&#x7C7B;&#x5C5E;&#x6027;&#x8FC7;&#x6EE4;&#x5668;
+   attributes&#xFF1A;              &#x8981;&#x5305;&#x542B;&#x5728;&#x641C;&#x7D22;&#x7ED3;&#x679C;&#x4E2D;&#x7684;&#x5C5E;&#x6027;
+</code></pre><p><img src="https://atlas.apache.org/images/twiki/search-basic-hive_column-PII.png" alt="search-basic-hive_column-PII"></p>
+<p>&#x53EF;&#x4EE5;&#x4F7F;&#x7528;AND/OR&#x6761;&#x4EF6;&#x5BF9;&#x591A;&#x4E2A;&#x5C5E;&#x6027;&#x8FDB;&#x884C;&#x57FA;&#x4E8E;&#x5C5E;&#x6027;&#x7684;&#x8FC7;&#x6EE4;&#x3002;</p>
+<h5 id="&#x8FC7;&#x6EE4;&#x793A;&#x4F8B;&#xFF08;&#x9002;&#x7528;&#x4E8E;hivetable&#x5C5E;&#x6027;&#xFF09;"><a name="&#x8FC7;&#x6EE4;&#x793A;&#x4F8B;&#xFF08;&#x9002;&#x7528;&#x4E8E;hivetable&#x5C5E;&#x6027;&#xFF09;" class="anchor-navigation-ex-anchor" href="#&#x8FC7;&#x6EE4;&#x793A;&#x4F8B;&#xFF08;&#x9002;&#x7528;&#x4E8E;hivetable&#x5C5E;&#x6027;&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x8FC7;&#x6EE4;&#x793A;&#x4F8B;&#xFF08;&#x9002;&#x7528;&#x4E8E;hivetable&#x5C5E;&#x6027;&#xFF09;" class="plugin-anchor" href="#&#x8FC7;&#x6EE4;&#x793A;&#x4F8B;&#xFF08;&#x9002;&#x7528;&#x4E8E;hivetable&#x5C5E;&#x6027;&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8FC7;&#x6EE4;&#x793A;&#x4F8B;&#xFF08;&#x9002;&#x7528;&#x4E8E;hive_table&#x5C5E;&#x6027;&#xFF09;</h5>
+<ul>
+<li>&#x5355;&#x4E2A;&#x5C5E;&#x6027;&#xFF1A;
+```
+{
+   &quot;typeName&quot;:               &quot;hive_table&quot;,
+   &quot;excludeDeletedEntities&quot;: true,
+   &quot;offset&quot;:                 0,
+   &quot;limit&quot;:                  25,
+   &quot;entityFilters&quot;: {<pre><code>  &quot;attributeName&quot;:  &quot;name&quot;,
+  &quot;operator&quot;:       &quot;contains&quot;,
+  &quot;attributeValue&quot;: &quot;customers&quot;
+</code></pre>   },
+   &quot;attributes&quot;: [ &quot;db&quot;, &quot;qualifiedName&quot; ]
+ }</li>
+</ul>
+<pre><code>
+![search-basic-hive_table-customers](https://atlas.apache.org/images/twiki/search-basic-hive_table-customers.png)
+
+- &#x5305;&#x542B;OR&#x6761;&#x4EF6;&#x7684;&#x591A;&#x4E2A;&#x5C5E;&#x6027;
+</code></pre><p>{
+    &quot;typeName&quot;:               &quot;hive_table&quot;,
+    &quot;excludeDeletedEntities&quot;: true,
+    &quot;offset&quot;:                 0,
+    &quot;limit&quot;:                  25,
+    &quot;entityFilters&quot;: {
+       &quot;condition&quot;: &quot;OR&quot;,
+       &quot;criterion&quot;: [
+          {
+             &quot;attributeName&quot;:  &quot;name&quot;,
+             &quot;operator&quot;:       &quot;contains&quot;,
+             &quot;attributeValue&quot;: &quot;customers&quot;
+          },
+          {
+             &quot;attributeName&quot;:  &quot;name&quot;,
+             &quot;operator&quot;:       &quot;contains&quot;,
+             &quot;attributeValue&quot;: &quot;provider&quot;
+          }
+       ]
+    },
+    &quot;attributes&quot;: [ &quot;db&quot;, &quot;qualifiedName&quot; ]
+  }</p>
+<pre><code>![search-basic-hive_table-customers-or-provider](https://atlas.apache.org/images/twiki/search-basic-hive_table-customers-or-provider.png)
+
+- &#x5305;&#x542B;AND&#x6761;&#x4EF6;&#x7684;&#x591A;&#x4E2A;&#x5C5E;&#x6027;
+</code></pre><p>{
+     &quot;typeName&quot;:               &quot;hive_table&quot;,
+     &quot;excludeDeletedEntities&quot;: true,
+     &quot;offset&quot;:                 0,
+     &quot;limit&quot;:                  25,
+     &quot;entityFilters&quot;: {
+        &quot;condition&quot;: &quot;AND&quot;,
+        &quot;criterion&quot;: [
+           {
+              &quot;attributeName&quot;:  &quot;name&quot;,
+              &quot;operator&quot;:       &quot;contains&quot;,
+              &quot;attributeValue&quot;: &quot;customers&quot;
+           },
+           {
+              &quot;attributeName&quot;:  &quot;owner&quot;,
+              &quot;operator&quot;:       &quot;eq&quot;,
+              &quot;attributeValue&quot;: &quot;hive&quot;
+           }
+        ]
+     },
+     &quot;attributes&quot;: [ &quot;db&quot;, &quot;qualifiedName&quot; ]
+  }</p>
+<pre><code>
+![search-basic-hive_table-customers-owner_is_hive](https://atlas.apache.org/images/twiki/search-basic-hive_table-customers-owner_is_hive.png)
+
+##### &#x652F;&#x6301;&#x8FC7;&#x6EE4;&#x7684;&#x8FD0;&#x7B97;&#x7B26;
+- LT&#xFF08;&#x64CD;&#x4F5C;&#x7B26;&#xFF1A;&lt;&#xFF0C;lt&#xFF09;&#x4E0E;Numeric&#xFF0C;Date&#x5C5E;&#x6027;&#x4E00;&#x8D77;&#x4F7F;&#x7528;
+- GT&#xFF08;&#x64CD;&#x4F5C;&#x7B26;&#xFF1A;&gt;&#xFF0C;gt&#xFF09;&#x4E0E;Numeric&#xFF0C;Date&#x5C5E;&#x6027;&#x4E00;&#x8D77;&#x4F7F;&#x7528;
+- LTE&#xFF08;&#x64CD;&#x4F5C;&#x7B26;&#xFF1A;&lt;=&#xFF0C;lte&#xFF09;&#x4E0E;Numeric&#xFF0C;Date&#x5C5E;&#x6027;&#x4E00;&#x8D77;&#x4F7F;&#x7528;
+- GTE&#xFF08;&#x64CD;&#x4F5C;&#x7B26;&#xFF1A;&gt; =&#xFF0C;gte&#xFF09;&#x4E0E;Numeric&#xFF0C;Date&#x5C5E;&#x6027;&#x4E00;&#x8D77;&#x4F7F;&#x7528;
+- EQ&#xFF08;&#x64CD;&#x4F5C;&#x7B26;&#xFF1A;eq&#xFF0C;=&#xFF09;&#x4E0E;Numeric&#xFF0C;Date&#xFF0C;String&#x5C5E;&#x6027;&#x4E00;&#x8D77;&#x4F7F;&#x7528;
+- NEQ&#xFF08;&#x64CD;&#x4F5C;&#x7B26;&#xFF1A;neq&#xFF0C;&#xFF01;=&#xFF09;&#x4E0E;Numeric&#xFF0C;Date&#xFF0C;String&#x5C5E;&#x6027;&#x4E00;&#x8D77;&#x4F7F;&#x7528;
+- LIKE&#xFF08;&#x64CD;&#x4F5C;&#x7B26;&#xFF1A;like&#xFF0C;LIKE&#xFF09;&#x4E0E;String&#x5C5E;&#x6027;&#x4E00;&#x8D77;&#x4F7F;&#x7528;
+- STARTS_WITH&#xFF08;symbols&#xFF1A;startsWith&#xFF0C;STARTSWITH&#xFF09;&#x4E0E;String&#x5C5E;&#x6027;&#x4E00;&#x8D77;&#x4F7F;&#x7528;
+- ENDS_WITH&#xFF08;symbols&#xFF1A;endsWith&#xFF0C;ENDSWITH&#xFF09;&#x4E0E;String&#x5C5E;&#x6027;&#x4E00;&#x8D77;&#x4F7F;&#x7528;
+- CONTAINS&#xFF08;&#x64CD;&#x4F5C;&#x7B26;&#xFF1A;contains&#xFF0C;CONTAINS&#xFF09;&#x4E0E;String&#x5C5E;&#x6027;&#x4E00;&#x8D77;&#x4F7F;&#x7528;
+
+**CURL&#x793A;&#x4F8B;**
+</code></pre><p>curl -sivk -g
+   -u <user>:<password>
+   -X POST
+   -d &apos;{
+           &quot;typeName&quot;:               &quot;hive_table&quot;,
+           &quot;excludeDeletedEntities&quot;: true,
+           &quot;classification&quot;:         &quot;&quot;,
+           &quot;query&quot;:                  &quot;&quot;,
+           &quot;offset&quot;:                 0,
+           &quot;limit&quot;:                  50,
+           &quot;entityFilters&quot;: {
+              &quot;condition&quot;: &quot;AND&quot;,
+              &quot;criterion&quot;: [
+                 {
+                    &quot;attributeName&quot;:  &quot;name&quot;,
+                    &quot;operator&quot;:       &quot;contains&quot;,
+                    &quot;attributeValue&quot;: &quot;customers&quot;
+                 },
+                 {
+                    &quot;attributeName&quot;:  &quot;owner&quot;,
+                    &quot;operator&quot;:       &quot;eq&quot;,
+                    &quot;attributeValue&quot;: &quot;hive&quot;
+                 }
+              ]
+           },
+           &quot;attributes&quot;: [ &quot;db&quot;, &quot;qualifiedName&quot; ]
+         }&apos;
+   <protocol>://<atlas_host>:<atlas_port>/api/atlas/v2/search/basic
+```</atlas_port></atlas_host></protocol></password></user></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="02.类型系统.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 02-类型系统​">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"03-基本搜索","level":"1.4","depth":1,"next":{"title":"04-高级搜索✘","level":"1.5","depth":1,"ref":"","articles":[]},"previous":{"title":"02-类型系统​","level":"1.3","depth":1,"path":"02.类型系统.md","ref":"02.类型系统.md","articles":[]},"dir":"ltr"},"config":{"plugins":["sharing","splitter","-expandable-chapters-small","anchors","github","github-buttons","-donate","sharing-plus","anchor-navigation-ex","favicon","livereload"],"styles":{"website":"/styles/website.css"},"pluginsConfig":{"github":{"url":"https://github.com/mantoudev"},"livereload":{},"splitter":{},"search":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"favicon":{"shortcut":"/source/images/favicon.jpg","bookmark":"/source/images/favicon.jpg","appleTouch":"/source/images/apple-touch-icon.jpg","appleTouchMore":{"120x120":"/source/images/apple-touch-icon.jpg","180x180":"/source/images/apple-touch-icon.jpg"}},"github-buttons":{"buttons":[{"user":"mantou","repo":"atlas_cn","type":"star","size":"small","count":true}]},"sharing":{"qq":false,"all":["google","facebook","weibo","twitter","qq","qzone","linkedin","pocket"],"douban":false,"facebook":false,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","author":"mantou","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Mantou Book","language":"zh-hans","links":{"sidebar":{"MantouDev":"https://mantoudev.com"}},"gitbook":"3.2.3","description":"吭哧吭哧"},"file":{"path":"03.基本搜索.md","mtime":"2018-11-30T08:54:40.927Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-30T08:57:23.654Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

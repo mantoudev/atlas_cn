@@ -1,0 +1,781 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>06-安全 · Mantou Book</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="mantou">
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+
+        
+    
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="07.认证.html" />
+    
+    
+    <link rel="prev" href="05.术语.html" />
+    
+
+    
+        <link rel="shortcut icon" href='source/images/favicon.jpg' type="image/x-icon">
+    
+    
+        <link rel="bookmark" href='source/images/favicon.jpg' type="image/x-icon">
+    
+    
+        <link rel="apple-touch-icon" href='source/images/apple-touch-icon.jpg'>
+    
+    
+        
+        <link rel="apple-touch-icon" sizes="120x120" href="source/images/apple-touch-icon.jpg">
+        
+        <link rel="apple-touch-icon" sizes="180x180" href="source/images/apple-touch-icon.jpg">
+        
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"mantou","repo":"atlas_cn","type":"star","size":"small","count":true}]};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://mantoudev.com" target="_blank" class="custom-link">MantouDev</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="01.高级架构.html">
+            
+                <a href="01.高级架构.html">
+            
+                    
+                    01-高级架构​
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="02.类型系统.html">
+            
+                <a href="02.类型系统.html">
+            
+                    
+                    02-类型系统​
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="03.基本搜索.html">
+            
+                <a href="03.基本搜索.html">
+            
+                    
+                    03-基本搜索
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    04-高级搜索✘
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="05.术语.html">
+            
+                <a href="05.术语.html">
+            
+                    
+                    05-术语表​
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.7" data-path="06.安全.html">
+            
+                <a href="06.安全.html">
+            
+                    
+                    06-安全
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="07.认证.html">
+            
+                <a href="07.认证.html">
+            
+                    
+                    07-认证
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="08.授权模型.html">
+            
+                <a href="08.授权模型.html">
+            
+                    
+                    08-Atlas授权模型
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="8.1 简单授权.html">
+            
+                <a href="8.1 简单授权.html">
+            
+                    
+                    8.1 配置Atlas Simple Authorizer
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="8.2 Ranger授权.html">
+            
+                <a href="8.2 Ranger授权.html">
+            
+                    
+                    8.2 配置Atlas Ranger Authorizer
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="09.分类传播.html">
+            
+                <a href="09.分类传播.html">
+            
+                    
+                    09-分类传播​
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="10.配置Atlas">
+            
+                <span>
+            
+                    
+                    10-配置Atlas属性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="11.通知">
+            
+                <span>
+            
+                    
+                    11-通知
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" >
+            
+                <span>
+            
+                    
+                    12-Hook & Bridge
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1" data-path="12.1 HBase Hook & Bridge.html">
+            
+                <a href="12.1 HBase Hook & Bridge.html">
+            
+                    
+                    12.1 HBase Hook＆Bridge
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.2" >
+            
+                <span>
+            
+                    
+                    12.2 Hive Hook＆Bridge✘
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.3" >
+            
+                <span>
+            
+                    
+                    12.3 Sqoop Hook✘
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.4" >
+            
+                <span>
+            
+                    
+                    12.4 Storm Hook✘
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.5" >
+            
+                <span>
+            
+                    
+                    12.5 Kafka Bridge✘
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" >
+            
+                <span>
+            
+                    
+                    13-容错和高可用性选项✘
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" >
+            
+                <span>
+            
+                    
+                    14-从Apache Atlas 0.8迁移✘
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >06-安全</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#06-&#x5B89;&#x5168;"><b></b>06. &#x5B89;&#x5168;</a></li><ul><li><span class="title-icon "></span><a href="#&#x6982;&#x8FF0;"><b></b>&#x6982;&#x8FF0;</a></li><ul><li><span class="title-icon "></span><a href="#ssl"><b></b>SSL</a></li><li><span class="title-icon "></span><a href="#&#x670D;&#x52A1;&#x8BA4;&#x8BC1;"><b></b>&#x670D;&#x52A1;&#x8BA4;&#x8BC1;</a></li><li><span class="title-icon "></span><a href="#jaas-&#x914D;&#x7F6E;"><b></b>JAAS &#x914D;&#x7F6E;</a></li><li><span class="title-icon "></span><a href="#&#x57FA;&#x4E8E;spnego&#x7684;http&#x8EAB;&#x4EFD;&#x9A8C;&#x8BC1;"><b></b>&#x57FA;&#x4E8E;SPNEGO&#x7684;HTTP&#x8EAB;&#x4EFD;&#x9A8C;&#x8BC1;</a></li></ul></ul></ul></div><a href="#06-&#x5B89;&#x5168;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="06-&#x5B89;&#x5168;"><a name="06-&#x5B89;&#x5168;" class="anchor-navigation-ex-anchor" href="#06-&#x5B89;&#x5168;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="06-&#x5B89;&#x5168;" class="plugin-anchor" href="#06-&#x5B89;&#x5168;"><i class="fa fa-link" aria-hidden="true"></i></a>06. &#x5B89;&#x5168;</h1>
+<h2 id="&#x6982;&#x8FF0;"><a name="&#x6982;&#x8FF0;" class="anchor-navigation-ex-anchor" href="#&#x6982;&#x8FF0;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x6982;&#x8FF0;" class="plugin-anchor" href="#&#x6982;&#x8FF0;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6982;&#x8FF0;</h2>
+<p>&#x4EE5;&#x4E0B;&#x529F;&#x80FD;&#x53EF;&#x7528;&#x4E8E;&#x589E;&#x5F3A;&#x5E73;&#x53F0;&#x7684;&#x5B89;&#x5168;&#x6027;&#xFF1A;</p>
+<ul>
+<li>SSL</li>
+<li>&#x670D;&#x52A1;&#x8BA4;&#x8BC1;</li>
+<li>&#x57FA;&#x4E8E;SPNEGO&#x7684;HTTP&#x8EAB;&#x4EFD;&#x9A8C;&#x8BC1;</li>
+</ul>
+<h3 id="ssl"><a name="ssl" class="anchor-navigation-ex-anchor" href="#ssl"><i class="fa fa-link" aria-hidden="true"></i></a><a name="ssl" class="plugin-anchor" href="#ssl"><i class="fa fa-link" aria-hidden="true"></i></a>SSL</h3>
+<p>&#x652F;&#x6301;SSL&#x5355;&#x5411;&#xFF08;&#x670D;&#x52A1;&#x5668;&#x8EAB;&#x4EFD;&#x9A8C;&#x8BC1;&#xFF09;&#x548C;&#x53CC;&#x5411;&#xFF08;&#x670D;&#x52A1;&#x5668;&#x548C;&#x5BA2;&#x6237;&#x7AEF;&#x8EAB;&#x4EFD;&#x9A8C;&#x8BC1;&#xFF09;&#x3002;&#x4EE5;&#x4E0B;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x5C5E;&#x6027;&#xFF08;atlas-application.properties&#x6587;&#x4EF6;&#x4E2D;&#x914D;&#x7F6E;&#x7684;&#x5C5E;&#x6027;&#xFF09;&#x53EF;&#x7528;&#x4E8E;&#x914D;&#x7F6E;SSL&#xFF1A;</p>
+<ul>
+<li><code>atlas.enableTLS</code>&#xFF08;false | true&#xFF09;[default&#xFF1A;false]:  &#x542F;&#x7528;/&#x7981;&#x7528;SSL&#x4FA6;&#x542C;&#x5668;&#x3002;</li>
+<li><code>keystore.file</code>:  &#x670D;&#x52A1;&#x5668;&#x5229;&#x7528;&#x7684;&#x5BC6;&#x94A5;&#x5E93;&#x6587;&#x4EF6;&#x7684;&#x8DEF;&#x5F84;&#x3002;&#x8BE5;&#x6587;&#x4EF6;&#x5305;&#x542B;&#x670D;&#x52A1;&#x5668;&#x8BC1;&#x4E66;&#x3002;</li>
+<li><code>truststore.file</code>:  &#x4FE1;&#x4EFB;&#x5E93;&#x6587;&#x4EF6;&#x7684;&#x8DEF;&#x5F84;&#x3002;&#x6B64;&#x6587;&#x4EF6;&#x5305;&#x542B;&#x5176;&#x4ED6;&#x53EF;&#x4FE1;&#x5B9E;&#x4F53;&#x7684;&#x8BC1;&#x4E66;&#xFF08;&#x4F8B;&#x5982;&#xFF0C;&#x5982;&#x679C;&#x542F;&#x7528;&#x4E86;&#x53CC;&#x5411;SSL&#xFF0C;&#x5219;&#x4E3A;&#x5BA2;&#x6237;&#x7AEF;&#x8FDB;&#x7A0B;&#x7684;&#x8BC1;&#x4E66;&#xFF09;&#x3002;&#x5728;&#x5927;&#x591A;&#x6570;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x53EF;&#x4EE5;&#x5C06;&#x5176;&#x8BBE;&#x7F6E;&#x4E3A;&#x4E0E;keystore.file&#x5C5E;&#x6027;&#x76F8;&#x540C;&#x7684;&#x503C;&#xFF08;&#x7279;&#x522B;&#x662F;&#x5982;&#x679C;&#x542F;&#x7528;&#x4E86;&#x5355;&#x5411;SSL&#xFF09;&#x3002;</li>
+<li><code>client.auth.enabled</code>&#xFF08;false | true&#xFF09;[default&#xFF1A;false]:  &#x542F;&#x7528;/&#x7981;&#x7528;&#x5BA2;&#x6237;&#x7AEF;&#x8EAB;&#x4EFD;&#x9A8C;&#x8BC1;&#x3002;&#x5982;&#x679C;&#x542F;&#x7528;&#xFF0C;&#x5BA2;&#x6237;&#x7AEF;&#x5C06;&#x5FC5;&#x987B;&#x5728;&#x4F20;&#x8F93;&#x4F1A;&#x8BDD;&#x5BC6;&#x94A5;&#x521B;&#x5EFA;&#x8FC7;&#x7A0B;&#x671F;&#x95F4;&#x5411;&#x670D;&#x52A1;&#x5668;&#x8FDB;&#x884C;&#x8EAB;&#x4EFD;&#x9A8C;&#x8BC1;&#xFF08;&#x5373;&#x53CC;&#x5411;SSL&#x6709;&#x6548;&#xFF09;&#x3002;</li>
+<li><code>cert.stores.credential.provider.path</code>:  &#x51ED;&#x636E;&#x63D0;&#x4F9B;&#x7A0B;&#x5E8F;&#x5B58;&#x50A8;&#x6587;&#x4EF6;&#x7684;&#x8DEF;&#x5F84;&#x3002;&#x5BC6;&#x94A5;&#x5E93;&#xFF0C;&#x4FE1;&#x4EFB;&#x5E93;&#x548C;&#x670D;&#x52A1;&#x5668;&#x8BC1;&#x4E66;&#x7684;&#x5BC6;&#x7801;&#x5728;&#x6B64;&#x5B89;&#x5168;&#x6587;&#x4EF6;&#x4E2D;&#x7EF4;&#x62A4;&#x3002;&#x5229;&#x7528;&apos;bin&apos;nirectoy&#x4E2D;&#x7684;cputil&#x811A;&#x672C;&#xFF08;&#x89C1;&#x4E0B;&#x6587;&#xFF09;&#xFF0C;&#x7528;&#x6240;&#x9700;&#x7684;&#x5BC6;&#x7801;&#x586B;&#x5145;&#x6B64;&#x6587;&#x4EF6;&#x3002;</li>
+<li><code>atlas.ssl.exclude.cipher.suites</code>: &#x6392;&#x9664;&#x7684;&#x5BC6;&#x7801;&#x5957;&#x4EF6;&#x5217;&#x8868; -  NULL.,.<em>RC4.</em>,.<em>MD5.</em>,.<em> DES.</em>,.<em> DSS.</em>&#x662F;&#x5F31;&#x4E14;&#x4E0D;&#x5B89;&#x5168;&#x7684;&#x5BC6;&#x7801;&#x5957;&#x4EF6;&#x9ED8;&#x8BA4;&#x6392;&#x9664;&#x3002;&#x5982;&#x679C;&#x9700;&#x8981;&#x6392;&#x9664;&#x5176;&#x4ED6;&#x5BC6;&#x7801;&#xFF0C;&#x8BF7;&#x4F7F;&#x7528;&#x9ED8;&#x8BA4;&#x7684;&#x5BC6;&#x7801;&#x5957;&#x4EF6;&#x8BBE;&#x7F6E;&#x6B64;&#x5C5E;&#x6027;&#xFF0C;&#x4F8B;&#x5982;atlas.ssl.exclude.cipher.suites =.<em>NULL.</em>,.<em> RC4.</em>,.<em>MD5.</em>,.<em>DES.</em>,.<em>DSS.</em> DSS&#x3002;*&#xFF0C;&#x5E76;&#x4F7F;&#x7528;&#x9017;&#x53F7;&#x5206;&#x9694;&#x7B26;&#x5C06;&#x5176;&#x4ED6;Ciper Suites&#x6DFB;&#x52A0;&#x5230;&#x5217;&#x8868;&#x4E2D;&#x3002;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x5176;&#x5168;&#x540D;&#x6216;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x6DFB;&#x52A0;&#x5B83;&#x4EEC;&#x3002; - - - atlas.ssl.exclude.cipher.suites&#x5C5E;&#x6027;&#x4E2D;&#x5217;&#x51FA;&#x7684;&#x5BC6;&#x7801;&#x5957;&#x4EF6;&#x5C06;&#x4F18;&#x5148;&#x4E8E;&#x9ED8;&#x8BA4;&#x7684;&#x5BC6;&#x7801;&#x5957;&#x4EF6;&#x3002;&#x4E00;&#x4E2A;&#x4EBA;&#x4F1A;&#x4FDD;&#x7559;&#x9ED8;&#x8BA4;&#x7684;&#x5BC6;&#x7801;&#x5957;&#x4EF6;&#xFF0C;&#x5E76;&#x6DFB;&#x52A0;&#x989D;&#x5916;&#x7684;&#x5BC6;&#x7801;&#x5957;&#x4EF6;&#x4EE5;&#x786E;&#x4FDD;&#x5B89;&#x5168;&#x3002;</li>
+</ul>
+<h4 id="&#x51ED;&#x636E;&#x63D0;&#x4F9B;&#x5B9E;&#x7528;&#x811A;&#x672C;"><a name="&#x51ED;&#x636E;&#x63D0;&#x4F9B;&#x5B9E;&#x7528;&#x811A;&#x672C;" class="anchor-navigation-ex-anchor" href="#&#x51ED;&#x636E;&#x63D0;&#x4F9B;&#x5B9E;&#x7528;&#x811A;&#x672C;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x51ED;&#x636E;&#x63D0;&#x4F9B;&#x5B9E;&#x7528;&#x811A;&#x672C;" class="plugin-anchor" href="#&#x51ED;&#x636E;&#x63D0;&#x4F9B;&#x5B9E;&#x7528;&#x811A;&#x672C;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x51ED;&#x636E;&#x63D0;&#x4F9B;&#x5B9E;&#x7528;&#x811A;&#x672C;</h4>
+<p>&#x4E3A;&#x4E86;&#x9632;&#x6B62;&#x4F7F;&#x7528;&#x660E;&#x6587;&#x5BC6;&#x7801;&#xFF0C;Atlas&#x4F7F;&#x7528;Credential Provider&#x5DE5;&#x5177;&#x8FDB;&#x884C;&#x5B89;&#x5168;&#x5BC6;&#x7801;&#x5B58;&#x50A8;&#xFF08;&#x6709;&#x5173;&#x6B64;&#x5DE5;&#x5177;&#x7684;&#x66F4;&#x591A;&#x4FE1;&#x606F;&#xFF0C;&#x8BF7;&#x53C2;&#x9605; <a href="http://hadoop.apache.org/docs/current/hadoop-project-dist/hadoop-common/CommandsManual.html#credential" target="_blank">Hadoop&#x51ED;&#x636E;&#x547D;&#x4EE4;&#x53C2;&#x8003;</a> &#xFF09;&#x3002;&#x53EF;&#x4EE5;&#x5229;&#x7528;&apos;bin&apos;&#x76EE;&#x5F55;&#x4E2D;&#x7684;cputil&#x811A;&#x672C;&#x6765;&#x521B;&#x5EFA;&#x6240;&#x9700;&#x7684;&#x5BC6;&#x7801;&#x5B58;&#x50A8;&#x3002;</p>
+<p>&#x8981;&#x4E3A;Atlas&#x521B;&#x5EFA;&#x51ED;&#x636E;&#x63D0;&#x4F9B;&#x7A0B;&#x5E8F;&#xFF1A;</p>
+<ul>
+<li>cd&#x5230;&apos;bin&apos;&#x76EE;&#x5F55;</li>
+<li>&#x8F93;&#x5165;<code>./cputil.py</code></li>
+<li>&#x8F93;&#x5165;&#x751F;&#x6210;&#x7684;&#x51ED;&#x636E;&#x63D0;&#x4F9B;&#x7A0B;&#x5E8F;&#x7684;&#x8DEF;&#x5F84;&#x3002;&#x8DEF;&#x5F84;&#x7684;&#x683C;&#x5F0F;&#x4E3A;&#xFF1A;<ul>
+<li><a href="jceks://file/local/file/path/file.jceks" target="_blank">jceks&#xFF1A;//file/local/file/path/file.jceks</a>  &#x6216;  <a href="jceks://hdfs@namenodehost:port/path/in/hdfs/to/file.jceks." target="_blank">jceks://hdfs@namenodehost&#xFF1A;port/path/in/hdfs/to/ file.jceks</a>&#x3002;&#x8FD9;&#x4E9B;&#x6587;&#x4EF6;&#x901A;&#x5E38;&#x4F7F;&#x7528;&#x201C;.jceks&#x201D;&#x6269;&#x5C55;&#x540D;&#xFF08;&#x4F8B;&#x5982;test.jceks&#xFF09;</li>
+</ul>
+</li>
+<li>&#x8F93;&#x5165;&#x5BC6;&#x94A5;&#x5E93;&#x3001;&#x4FE1;&#x4EFB;&#x5E93;&#x548C;&#x670D;&#x52A1;&#x5668;&#x5BC6;&#x94A5;&#x7684;&#x5BC6;&#x7801;&#xFF08;&#x8FD9;&#x4E9B;&#x5BC6;&#x7801;&#x9700;&#x8981;&#x4E0E;&#x7528;&#x4E8E;&#x5B9E;&#x9645;&#x521B;&#x5EFA;&#x5173;&#x8054;&#x8BC1;&#x4E66;&#x5B58;&#x50A8;&#x6587;&#x4EF6;&#x7684;&#x5BC6;&#x7801;&#x76F8;&#x5339;&#x914D;&#xFF09;&#x3002;</li>
+</ul>
+<p>&#x5C06;&#x751F;&#x6210;&#x51ED;&#x8BC1;&#x63D0;&#x4F9B;&#x7A0B;&#x5E8F;&#x5E76;&#x5C06;&#x5176;&#x4FDD;&#x5B58;&#x5230;&#x63D0;&#x4F9B;&#x7684;&#x8DEF;&#x5F84;&#x4E2D;&#x3002;</p>
+<h3 id="&#x670D;&#x52A1;&#x8BA4;&#x8BC1;"><a name="&#x670D;&#x52A1;&#x8BA4;&#x8BC1;" class="anchor-navigation-ex-anchor" href="#&#x670D;&#x52A1;&#x8BA4;&#x8BC1;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x670D;&#x52A1;&#x8BA4;&#x8BC1;" class="plugin-anchor" href="#&#x670D;&#x52A1;&#x8BA4;&#x8BC1;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x670D;&#x52A1;&#x8BA4;&#x8BC1;</h3>
+<p>Atlas&#x5E73;&#x53F0;&#x5728;&#x542F;&#x52A8;&#x65F6;&#x4E0E;&#x7ECF;&#x8FC7;&#x8EAB;&#x4EFD;&#x9A8C;&#x8BC1;&#x7684;&#x8EAB;&#x4EFD;&#x76F8;&#x5173;&#x8054;&#x3002;&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x5728;&#x4E0D;&#x5B89;&#x5168;&#x7684;&#x73AF;&#x5883;&#x4E2D;&#xFF0C;&#x8BE5;&#x6807;&#x8BC6;&#x4E0E;&#x542F;&#x52A8;&#x670D;&#x52A1;&#x5668;&#x7684;OS&#x8EAB;&#x4EFD;&#x9A8C;&#x8BC1;&#x7528;&#x6237;&#x76F8;&#x540C;&#x3002;&#x4F46;&#x662F;&#xFF0C;&#x5728;&#x5229;&#x7528;kerberos&#x7684;&#x5B89;&#x5168;&#x96C6;&#x7FA4;&#x4E2D;&#xFF0C;&#x6700;&#x4F73;&#x505A;&#x6CD5;&#x662F;&#x914D;&#x7F6E;&#x5BC6;&#x94A5;&#x8868;&#x548C;&#x4E3B;&#x4F53;&#xFF0C;&#x4EE5;&#x4FBF;&#x5E73;&#x53F0;&#x5BF9;KDC&#x8FDB;&#x884C;&#x8EAB;&#x4EFD;&#x9A8C;&#x8BC1;&#x3002;&#x8FD9;&#x5141;&#x8BB8;&#x670D;&#x52A1;&#x968F;&#x540E;&#x4E0E;&#x5176;&#x4ED6;&#x5B89;&#x5168;&#x96C6;&#x7FA4;&#x670D;&#x52A1;&#xFF08;&#x4F8B;&#x5982;HDFS&#xFF09;&#x4EA4;&#x4E92;&#x3002;</p>
+<p>&#x914D;&#x7F6E;&#x670D;&#x52A1;&#x8EAB;&#x4EFD;&#x9A8C;&#x8BC1;&#x7684;&#x5C5E;&#x6027;&#x5305;&#x62EC;&#xFF1A;</p>
+<ul>
+<li><code>atlas.authentication.method</code>&#xFF08;simple | kerberos&#xFF09;[default&#xFF1A;simple]: &#x8981;&#x4F7F;&#x7528;&#x7684;&#x8EAB;&#x4EFD;&#x9A8C;&#x8BC1;&#x65B9;&#x6CD5;&#x3002; Simple&#x5C06;&#x5229;&#x7528;OS&#x8EAB;&#x4EFD;&#x9A8C;&#x8BC1;&#x8EAB;&#x4EFD;&#x5E76;&#x4E14;&#x662F;&#x9ED8;&#x8BA4;&#x673A;&#x5236;&#x3002; &apos;kerberos&apos;&#x8868;&#x793A;&#x8BE5;&#x670D;&#x52A1;&#x9700;&#x8981;&#x4F7F;&#x7528;&#x5DF2;&#x914D;&#x7F6E;&#x7684;&#x5BC6;&#x94A5;&#x8868;&#x548C;&#x4E3B;&#x4F53;&#x5BF9;KDC&#x8FDB;&#x884C;&#x8EAB;&#x4EFD;&#x9A8C;&#x8BC1;&#x3002;</li>
+<li><code>atlas.authentication.keytab</code>: keytab&#x6587;&#x4EF6;&#x7684;&#x8DEF;&#x5F84;&#x3002;</li>
+<li><code>atlas.authentication.principal</code>:  &#x7528;&#x4E8E;&#x5411;KDC&#x8FDB;&#x884C;&#x8EAB;&#x4EFD;&#x9A8C;&#x8BC1;&#x7684;&#x4E3B;&#x4F53;&#x3002;&#x4E3B;&#x4F53;&#x901A;&#x5E38;&#x662F;&#x201C;user / host @ realm&#x201D;&#x5F62;&#x5F0F;&#x3002;&#x60A8;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&apos;_HOST&apos;&#x6807;&#x8BB0;&#x4F5C;&#x4E3A;&#x4E3B;&#x673A;&#x540D;&#xFF0C;&#x672C;&#x5730;&#x4E3B;&#x673A;&#x540D;&#x5C06;&#x7531;&#x8FD0;&#x884C;&#x65F6;&#x66FF;&#x6362;&#xFF08;&#x4F8B;&#x5982;&#x201C;Atlas/_HOST@EXAMPLE.COM&#x201D;&#xFF09;&#x3002;
+&#x8BF7;&#x6CE8;&#x610F;&#xFF0C;&#x5F53;Atlas&#x914D;&#x7F6E;&#x4E86;HBase&#x4F5C;&#x4E3A;&#x5B89;&#x5168;&#x96C6;&#x7FA4;&#x4E2D;&#x7684;&#x5B58;&#x50A8;&#x540E;&#x7AEF;&#x65F6;&#xFF0C;&#x56FE;&#x5F62;db&#xFF08;JanusGraph&#xFF09;&#x9700;&#x8981;&#x8DB3;&#x591F;&#x7684;&#x7528;&#x6237;&#x6743;&#x9650;&#x624D;&#x80FD;&#x521B;&#x5EFA;&#x548C;&#x8BBF;&#x95EE;HBase&#x8868;&#x3002;&#x8981;&#x6388;&#x4E88;&#x9002;&#x5F53;&#x7684;&#x6743;&#x9650;&#xFF0C;&#x8BF7;&#x53C2;&#x9605; <a href="https://atlas.apache.org/Configuration.html" target="_blank">&#x56FE;&#x5F62;&#x6301;&#x4E45;&#x6027;&#x5F15;&#x64CE;-Hbase</a>&#x3002;</li>
+</ul>
+<h3 id="jaas-&#x914D;&#x7F6E;"><a name="jaas-&#x914D;&#x7F6E;" class="anchor-navigation-ex-anchor" href="#jaas-&#x914D;&#x7F6E;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="jaas-&#x914D;&#x7F6E;" class="plugin-anchor" href="#jaas-&#x914D;&#x7F6E;"><i class="fa fa-link" aria-hidden="true"></i></a>JAAS &#x914D;&#x7F6E;</h3>
+<p>&#x5728;&#x5B89;&#x5168;&#x96C6;&#x7FA4;&#x4E2D;&#xFF0C;Atlas&#x4E0E;&#x4E4B;&#x4EA4;&#x4E92;&#x7684;&#x4E00;&#x4E9B;&#x7EC4;&#x4EF6;&#xFF08;&#x4F8B;&#x5982;Kafka&#xFF09;&#x9700;&#x8981;Atlas&#x4F7F;&#x7528;JAAS&#x5411;&#x4ED6;&#x4EEC;&#x8FDB;&#x884C;&#x8EAB;&#x4EFD;&#x9A8C;&#x8BC1;&#x3002;&#x4EE5;&#x4E0B;&#x5C5E;&#x6027;&#x7528;&#x4E8E;&#x8BBE;&#x7F6E;&#x9002;&#x5F53;&#x7684;JAAS&#x914D;&#x7F6E;&#x3002;</p>
+<ul>
+<li><code>atlas.jaas.client-id.loginModuleName - the authentication method used by the component (for example, com.sun.security.auth.module.Krb5LoginModule)</code></li>
+<li><code>atlas.jaas.client-id.loginModuleControlFlag-  (required|requisite|sufficient|optional) [default: required]</code></li>
+<li><code>atlas.jaas.client-id.option.useKeyTab (true|false)</code></li>
+<li><code>atlas.jaas.client-id.option.storeKey (true | false)</code></li>
+<li><code>atlas.jaas.client-id.option.serviceName - service name of server component</code></li>
+<li><code>atlas.jaas.client-id.option.keyTab = </code></li>
+<li><code>atlas.jaas.client-id.option.principal = </code></li>
+</ul>
+<p>&#x4F8B;&#x5982;&#xFF0C;jaas-application.properties&#x6587;&#x4EF6;&#x4E2D;&#x7684;&#x4EE5;&#x4E0B;&#x5C5E;&#x6027;&#x8BBE;&#x7F6E;&#xFF1A;</p>
+<pre><code>atlas.jaas.KafkaClient.loginModuleName = com.sun.security.auth.module.Krb5LoginModule
+atlas.jaas.KafkaClient.loginModuleControlFlag = required
+atlas.jaas.KafkaClient.option.useKeyTab = true
+atlas.jaas.KafkaClient.option.storeKey = true
+atlas.jaas.KafkaClient.option.serviceName = kafka
+atlas.jaas.KafkaClient.option.keyTab = /etc/security/keytabs/kafka_client.keytab
+atlas.jaas.KafkaClient.option.principal = kafka-client-1@EXAMPLE.COM
+
+atlas.jaas.MyClient.0.loginModuleName = com.sun.security.auth.module.Krb5LoginModule
+atlas.jaas.MyClient.0.loginModuleControlFlag = required
+atlas.jaas.MyClient.0.option.useKeyTab = true
+atlas.jaas.MyClient.0.option.storeKey = true
+atlas.jaas.MyClient.0.option.serviceName = kafka
+atlas.jaas.MyClient.0.option.keyTab = /etc/security/keytabs/kafka_client.keytab
+atlas.jaas.MyClient.0.option.principal = kafka-client-1@EXAMPLE.COM
+
+atlas.jaas.MyClient.1.loginModuleName = com.sun.security.auth.module.Krb5LoginModule
+atlas.jaas.MyClient.1.loginModuleControlFlag = optional
+atlas.jaas.MyClient.1.option.useKeyTab = true
+atlas.jaas.MyClient.1.option.storeKey = true
+atlas.jaas.MyClient.1.option.serviceName = kafka
+atlas.jaas.MyClient.1.option.keyTab = /etc/security/keytabs/kafka_client.keytab
+atlas.jaas.MyClient.1.option.principal = kafka-client-1@EXAMPLE.COM
+</code></pre><p>&#x8BE5;&#x914D;&#x7F6E;&#x7B49;&#x540C;&#x4E8E;&#x4EE5;&#x4E0B;jaas.conf&#x6587;&#x4EF6;&#x6761;&#x76EE;&#xFF1A;</p>
+<pre><code>KafkaClient {
+    com.sun.security.auth.module.Krb5LoginModule required
+    useKeyTab=true
+    storeKey=true
+    serviceName=kafka
+    keyTab=&quot;/etc/security/keytabs/kafka_client.keytab&quot;
+    principal=&quot;kafka-client-1@EXAMPLE.COM&quot;;
+};
+MyClient {
+    com.sun.security.auth.module.Krb5LoginModule required
+    useKeyTab=true
+    storeKey=true
+    serviceName=kafka keyTab=&quot;/etc/security/keytabs/kafka_client.keytab&quot;
+    principal=&quot;kafka-client-1@EXAMPLE.COM&quot;;
+};
+MyClient {
+    com.sun.security.auth.module.Krb5LoginModule optional
+    useKeyTab=true
+    storeKey=true
+    serviceName=kafka
+    keyTab=&quot;/etc/security/keytabs/kafka_client.keytab&quot;
+    principal=&quot;kafka-client-1@EXAMPLE.COM&quot;;
+};
+</code></pre><h3 id="&#x57FA;&#x4E8E;spnego&#x7684;http&#x8EAB;&#x4EFD;&#x9A8C;&#x8BC1;"><a name="&#x57FA;&#x4E8E;spnego&#x7684;http&#x8EAB;&#x4EFD;&#x9A8C;&#x8BC1;" class="anchor-navigation-ex-anchor" href="#&#x57FA;&#x4E8E;spnego&#x7684;http&#x8EAB;&#x4EFD;&#x9A8C;&#x8BC1;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x57FA;&#x4E8E;spnego&#x7684;http&#x8EAB;&#x4EFD;&#x9A8C;&#x8BC1;" class="plugin-anchor" href="#&#x57FA;&#x4E8E;spnego&#x7684;http&#x8EAB;&#x4EFD;&#x9A8C;&#x8BC1;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x57FA;&#x4E8E;SPNEGO&#x7684;HTTP&#x8EAB;&#x4EFD;&#x9A8C;&#x8BC1;</h3>
+<p>&#x901A;&#x8FC7;&#x542F;&#x7528;&#x5E73;&#x53F0;&#x7684;SPNEGO&#x652F;&#x6301;&#xFF0C;&#x53EF;&#x4EE5;&#x4FDD;&#x62A4;&#x5BF9;Atlas&#x5E73;&#x53F0;&#x7684;HTTP&#x8BBF;&#x95EE;&#x3002;&#x76EE;&#x524D;&#x6709;&#x4E24;&#x79CD;&#x652F;&#x6301;&#x7684;&#x8EAB;&#x4EFD;&#x9A8C;&#x8BC1;&#x673A;&#x5236;&#xFF1A;</p>
+<ul>
+<li><code>Simple</code>&#xFF1A;&#x901A;&#x8FC7;&#x63D0;&#x4F9B;&#x7684;&#x7528;&#x6237;&#x540D;&#x6267;&#x884C;&#x8EAB;&#x4EFD;&#x9A8C;&#x8BC1;&#x3002;</li>
+<li><code>Kerberos</code> &#xFF1A;&#x5229;&#x7528;&#x5BA2;&#x6237;&#x7AEF;&#x7684;KDC&#x8EAB;&#x4EFD;&#x9A8C;&#x8BC1;&#x8EAB;&#x4EFD;&#x5BF9;&#x670D;&#x52A1;&#x5668;&#x8FDB;&#x884C;&#x8EAB;&#x4EFD;&#x9A8C;&#x8BC1;&#x3002;</li>
+</ul>
+<p>Kerberos&#x652F;&#x6301;&#x8981;&#x6C42;&#x8BBF;&#x95EE;&#x670D;&#x52A1;&#x5668;&#x7684;&#x5BA2;&#x6237;&#x7AEF;&#x9996;&#x5148;&#x5411;KDC&#x8FDB;&#x884C;&#x8EAB;&#x4EFD;&#x9A8C;&#x8BC1;&#xFF08;&#x901A;&#x5E38;&#x8FD9;&#x662F;&#x901A;&#x8FC7;&apos;kinit&apos;&#x547D;&#x4EE4;&#x5B8C;&#x6210;&#x7684;&#xFF09;&#x3002;&#x4E00;&#x65E6;&#x7ECF;&#x8FC7;&#x8EAB;&#x4EFD;&#x9A8C;&#x8BC1;&#xFF0C;&#x7528;&#x6237;&#x5C31;&#x53EF;&#x4EE5;&#x8BBF;&#x95EE;&#x670D;&#x52A1;&#x5668;&#xFF08;&#x8EAB;&#x4EFD;&#x9A8C;&#x8BC1;&#x662F;&#x901A;&#x8FC7;SPNEGO&#x534F;&#x5546;&#x673A;&#x5236;&#x4E0E;&#x670D;&#x52A1;&#x5668;&#x4EA4;&#x4E92;&#xFF09;&#x3002;</p>
+<p>&#x914D;&#x7F6E;SPNEGO&#x652F;&#x6301;&#x7684;&#x5C5E;&#x6027;&#x5305;&#x62EC;&#xFF1A;</p>
+<ul>
+<li><code>atlas.http.authentication.enabled</code>&#xFF08;true | false&#xFF09;[default&#xFF1A;false]&#xFF1A;&#x662F;&#x5426;&#x542F;&#x7528;HTTP&#x8EAB;&#x4EFD;&#x9A8C;&#x8BC1;&#x7684;&#x5C5E;&#x6027;</li>
+<li><code>atlas.http.authentication.type</code>&#xFF08;simple | kerberos&#xFF09;[default&#xFF1A;simple]: &#x8EAB;&#x4EFD;&#x9A8C;&#x8BC1;&#x7C7B;&#x578B;</li>
+<li><code>atlas.http.authentication.kerberos.principal</code>:  Web&#x5E94;&#x7528;&#x7A0B;&#x5E8F;Kerberos&#x4E3B;&#x4F53;&#x540D;&#x79F0;&#x3002; Kerberos&#x4E3B;&#x4F53;&#x540D;&#x79F0;&#x5FC5;&#x987B;&#x4EE5;&#x201C;HTTP / ...&#x201D;&#x5F00;&#x5934;&#x3002;&#x4F8B;&#x5982;&#xFF1A;&#x201C;HTTP / localhost @ LOCALHOST&#x201D;&#x3002;&#x6CA1;&#x6709;&#x9ED8;&#x8BA4;&#x503C;&#x3002;</li>
+<li>`atlas.http.authentication.kerberos.keytab  - &#x5305;&#x542B;kerberos&#x4E3B;&#x4F53;&#x51ED;&#x636E;&#x7684;keytab&#x6587;&#x4EF6;&#x7684;&#x8DEF;&#x5F84;&#x3002;</li>
+<li><code>atlas.rest.address</code>: <http https="">&#xFF1A;// <atlas-fqdn>&#xFF1A;<atlas port=""></atlas></atlas-fqdn></http></li>
+</ul>
+<p>&#x6709;&#x5173;HTTP&#x8EAB;&#x4EFD;&#x9A8C;&#x8BC1;&#x673A;&#x5236;&#x7684;&#x66F4;&#x8BE6;&#x7EC6;&#x8BA8;&#x8BBA;&#xFF0C;&#x8BF7;&#x53C2;&#x9605; <a href="http://hadoop.apache.org/docs/stable/hadoop-auth/Configuration.html" target="_blank">Hadoop Auth&#xFF0C;Java HTTP SPNEGO 2.6.0  - &#x670D;&#x52A1;&#x5668;&#x7AEF;&#x914D;&#x7F6E;</a>&#x3002;&#x5728;Atlas&#x8EAB;&#x4EFD;&#x9A8C;&#x8BC1;&#x5B9E;&#x73B0;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x6587;&#x6863;&#x5F15;&#x7528;&#x7684;&#x524D;&#x7F00;&#x662F;<code>atlas.http.authentication</code>&#x3002;</p>
+<h4 id="&#x5BA2;&#x6237;&#x7AEF;&#x5B89;&#x5168;&#x914D;&#x7F6E;"><a name="&#x5BA2;&#x6237;&#x7AEF;&#x5B89;&#x5168;&#x914D;&#x7F6E;" class="anchor-navigation-ex-anchor" href="#&#x5BA2;&#x6237;&#x7AEF;&#x5B89;&#x5168;&#x914D;&#x7F6E;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x5BA2;&#x6237;&#x7AEF;&#x5B89;&#x5168;&#x914D;&#x7F6E;" class="plugin-anchor" href="#&#x5BA2;&#x6237;&#x7AEF;&#x5B89;&#x5168;&#x914D;&#x7F6E;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5BA2;&#x6237;&#x7AEF;&#x5B89;&#x5168;&#x914D;&#x7F6E;</h4>
+<p>&#x5F53;Atlas&#x5BA2;&#x6237;&#x7AEF;&#x901A;&#x8FC7;&#x4EE3;&#x7801;&#xFF0C;&#x4F7F;&#x7528;SSL&#x4F20;&#x8F93;&#x548C;/&#x6216;Kerberos&#x8EAB;&#x4EFD;&#x9A8C;&#x8BC1;&#x65B9;&#x5F0F;&#x4E0E;Atlas&#x670D;&#x52A1;&#x7AEF;&#x901A;&#x4FE1;&#x65F6;&#xFF0C;&#x9700;&#x8981;&#x63D0;&#x4F9B;Atlas&#x5BA2;&#x6237;&#x7AEF;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF0C;&#x8BE5;&#x6587;&#x4EF6;&#x63D0;&#x4F9B;&#x5141;&#x8BB8;&#x4E0E;&#x670D;&#x52A1;&#x5668;&#x901A;&#x4FE1;&#x6216;&#x8FDB;&#x884C;&#x8EAB;&#x4EFD;&#x9A8C;&#x8BC1;&#x7684;&#x5B89;&#x5168;&#x5C5E;&#x6027;&#x3002;&#x4F7F;&#x7528;&#x9002;&#x5F53;&#x7684;&#x8BBE;&#x7F6E;&#x66F4;&#x65B0;atlas-application.properties&#x6587;&#x4EF6;&#xFF08;&#x53C2;&#x89C1;&#x4E0B;&#x6587;&#xFF09;&#xFF0C;&#x5E76;&#x5C06;&#x5176;&#x590D;&#x5236;&#x5230;&#x5BA2;&#x6237;&#x7AEF;&#x7684;&#x7C7B;&#x8DEF;&#x5F84;&#x6216;&#x201C;atlas.conf&#x201D;&#x7CFB;&#x7EDF;&#x5C5E;&#x6027;&#x6307;&#x5B9A;&#x7684;&#x76EE;&#x5F55;&#x3002;</p>
+<p>SSL&#x901A;&#x4FE1;&#x76F8;&#x5173;&#x7684;&#x5BA2;&#x6237;&#x7AEF;&#x5C5E;&#x6027;&#x6709;&#xFF1A;</p>
+<ul>
+<li><code>atlas.enableTLS</code>&#xFF08;false | true&#xFF09;[default&#xFF1A;false]:  &#x542F;&#x7528;/&#x7981;&#x7528;SSL&#x5BA2;&#x6237;&#x7AEF;&#x901A;&#x4FE1;&#x57FA;&#x7840;&#x7ED3;&#x6784;&#x3002;</li>
+<li><code>keystore.file</code>:  &#x5BA2;&#x6237;&#x7AEF;&#x5229;&#x7528;&#x7684;&#x5BC6;&#x94A5;&#x5E93;&#x6587;&#x4EF6;&#x7684;&#x8DEF;&#x5F84;&#x3002;&#x4EC5;&#x5F53;&#x5728;&#x670D;&#x52A1;&#x5668;&#x4E0A;&#x542F;&#x7528;&#x4E86;&#x53CC;&#x5411;SSL&#x5E76;&#x4E14;&#x5305;&#x542B;&#x5BA2;&#x6237;&#x7AEF;&#x8BC1;&#x4E66;&#x65F6;&#xFF0C;&#x624D;&#x9700;&#x8981;&#x6B64;&#x6587;&#x4EF6;&#x3002;</li>
+<li><code>truststore.file</code>:  &#x4FE1;&#x4EFB;&#x5E93;&#x6587;&#x4EF6;&#x7684;&#x8DEF;&#x5F84;&#x3002;&#x6B64;&#x6587;&#x4EF6;&#x5305;&#x542B;&#x53EF;&#x4FE1;&#x5B9E;&#x4F53;&#x7684;&#x8BC1;&#x4E66;&#xFF08;&#x4F8B;&#x5982;&#xFF0C;&#x670D;&#x52A1;&#x5668;&#x6216;&#x5171;&#x4EAB;&#x8BC1;&#x4E66;&#x9881;&#x53D1;&#x673A;&#x6784;&#x7684;&#x8BC1;&#x4E66;&#xFF09;&#x3002;&#x5355;&#x5411;&#x6216;&#x53CC;&#x5411;SSL&#x90FD;&#x9700;&#x8981;&#x6B64;&#x6587;&#x4EF6;&#x3002;</li>
+<li><code>cert.stores.credential.provider.path</code>:  &#x51ED;&#x636E;&#x63D0;&#x4F9B;&#x7A0B;&#x5E8F;&#x5B58;&#x50A8;&#x6587;&#x4EF6;&#x7684;&#x8DEF;&#x5F84;&#x3002;&#x5BC6;&#x94A5;&#x5E93;&#xFF0C;&#x4FE1;&#x4EFB;&#x5E93;&#x548C;&#x5BA2;&#x6237;&#x7AEF;&#x8BC1;&#x4E66;&#x7684;&#x5BC6;&#x7801;&#x5728;&#x6B64;&#x5B89;&#x5168;&#x6587;&#x4EF6;&#x4E2D;&#x7EF4;&#x62A4;&#x3002;
+&#x9A8C;&#x8BC1;&#x670D;&#x52A1;&#x5668;&#x6240;&#x9700;&#x7684;&#x5C5E;&#x6027;&#xFF08;&#x5982;&#x679C;&#x542F;&#x7528;&#x4E86;&#x8EAB;&#x4EFD;&#x9A8C;&#x8BC1;&#xFF09;&#xFF1A;</li>
+<li><code>atlas.http.authentication.type</code>&#xFF08;simple | kerberos&#xFF09;[default&#xFF1A;simple]: &#x8EAB;&#x4EFD;&#x9A8C;&#x8BC1;&#x7C7B;&#x578B;</li>
+</ul>
+<h4 id="solr-kerberos-&#x914D;&#x7F6E;"><a name="solr-kerberos-&#x914D;&#x7F6E;" class="anchor-navigation-ex-anchor" href="#solr-kerberos-&#x914D;&#x7F6E;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="solr-kerberos-&#x914D;&#x7F6E;" class="plugin-anchor" href="#solr-kerberos-&#x914D;&#x7F6E;"><i class="fa fa-link" aria-hidden="true"></i></a>SOLR Kerberos &#x914D;&#x7F6E;</h4>
+<p>&#x5982;&#x679C;&#x6307;&#x5B9A;&#x7684;&#x8EAB;&#x4EFD;&#x9A8C;&#x8BC1;&#x7C7B;&#x578B;&#x4E3A;&#x201C;kerberos&#x201D;&#xFF0C;&#x5219;&#x5C06;&#x8BBF;&#x95EE;kerberos&#x7968;&#x8BC1;&#x7F13;&#x5B58;&#x4EE5;&#x5411;&#x670D;&#x52A1;&#x5668;&#x8FDB;&#x884C;&#x8EAB;&#x4EFD;&#x9A8C;&#x8BC1;&#xFF08;&#x56E0;&#x6B64;&#xFF0C;&#x5BA2;&#x6237;&#x7AEF;&#x9700;&#x8981;&#x5728;&#x4F7F;&#x7528;&#x201C;kinit&#x201D;&#x6216;&#x7C7B;&#x4F3C;&#x673A;&#x5236;&#x4E0E;&#x670D;&#x52A1;&#x5668;&#x901A;&#x4FE1;&#x4E4B;&#x524D;&#x5411;KDC&#x8FDB;&#x884C;&#x8EAB;&#x4EFD;&#x9A8C;&#x8BC1;&#xFF09;&#x3002;</p>
+<p>&#x53C2;&#x8003; <a href="https://cwiki.apache.org/confluence/display/RANGER/How+to+configure+Solr+Cloud+with+Kerberos+for+Ranger+0.5" target="_blank">the Apache SOLR Kerberos configuration</a></p>
+<ul>
+<li>&#x6DFB;&#x52A0;&#x4E3B;&#x4F53;&#x5E76;&#x751F;&#x6210;solr&#x7684;keytab&#x6587;&#x4EF6;&#x3002;&#x4E3A;&#x6BCF;&#x4E2A;&#x8981;&#x8FD0;&#x884C;Solr&#x7684;&#x4E3B;&#x673A;&#x4E3A;&#x6BCF;&#x4E2A;&#x4E3B;&#x673A;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;keytab&#x6587;&#x4EF6;&#xFF0C;&#x5E76;&#x5C06;&#x4E3B;&#x4F53;&#x540D;&#x79F0;&#x4E0E;&#x4E3B;&#x673A;&#x4E00;&#x8D77;&#x4F7F;&#x7528;&#xFF08;&#x4F8B;&#x5982;: <code>addprinc -randkey solr/${HOST1}@EXAMPLE.COM</code>&#x3002;&#x5C06;$ {HOST1}&#x66FF;&#x6362;&#x4E3A;&#x5B9E;&#x9645;&#x7684;&#x4E3B;&#x673A;&#x540D;&#xFF09;&#x3002;</li>
+</ul>
+<pre><code>   kadmin.local
+   kadmin.local:  addprinc -randkey solr/&lt;hostname&gt;@EXAMPLE.COM
+   kadmin.local:  xst -k solr.keytab solr/&lt;hostname&gt;@EXAMPLE.COM
+   kadmin.local:  quit
+</code></pre><ul>
+<li>&#x6DFB;&#x52A0;&#x4E3B;&#x4F53;&#x5E76;&#x751F;&#x6210;&#x7528;&#x4E8E;&#x9A8C;&#x8BC1;HTTP&#x8BF7;&#x6C42;&#x7684;keytab&#x6587;&#x4EF6;&#x3002; &#xFF08;&#x8BF7;&#x6CE8;&#x610F;&#xFF0C;&#x5982;&#x679C;Ambari&#x7528;&#x4E8E;Kerberize&#x96C6;&#x7FA4;&#xFF0C;&#x5219;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;keytab <code>/etc/security/keytabs/spnego.service.keytab</code>&#xFF09;</li>
+</ul>
+<pre><code>   kadmin.local
+   kadmin.local:  addprinc -randkey HTTP/&lt;hostname&gt;@EXAMPLE.COM
+   kadmin.local:  xst -k HTTP.keytab HTTP/&lt;hostname&gt;@EXAMPLE.COM
+   kadmin.local:  quit
+</code></pre><ul>
+<li>&#x5C06;keytab&#x6587;&#x4EF6;&#x590D;&#x5236;&#x5230;&#x8FD0;&#x884C;Solr&#x7684;&#x6240;&#x6709;&#x4E3B;&#x673A;&#x3002;</li>
+</ul>
+<pre><code>   cp solr.keytab /etc/security/keytabs/
+   chmod 400 /etc/security/keytabs/solr.keytab
+
+   cp HTTP.keytab /etc/security/keytabs/
+   chmod 400 /etc/security/keytabs/HTTP.keytab
+</code></pre><ul>
+<li>&#x5728;Zookeeper&#x4E2D;&#x521B;&#x5EFA;&#x8DEF;&#x5F84;&#x4EE5;&#x5B58;&#x50A8;Solr&#x914D;&#x7F6E;&#x548C;&#x5176;&#x4ED6;&#x53C2;&#x6570;&#x3002;<pre><code>$SOLR_INSTALL_HOME/server/scripts/cloud-scripts/zkcli.sh -zkhost $ZK_HOST:2181 -cmd makepath solr
+</code></pre></li>
+<li>&#x5C06;&#x914D;&#x7F6E;&#x4E0A;&#x4F20;&#x5230;Zookeeper</li>
+</ul>
+<pre><code> $SOLR_INSTALL_HOME/server/scripts/cloud-scripts/zkcli.sh -cmd upconfig  -zkhost $ZK_HOST:2181/solr -confname basic_configs -confdir $SOLR_INSTALL_HOME/server/solr/configsets/basic_configs/conf
+</code></pre><ul>
+<li>&#x521B;&#x5EFA;JAAS&#x914D;&#x7F6E;</li>
+</ul>
+<pre><code>  vi /etc/solr/conf/solr_jaas.conf
+
+   Client {
+     com.sun.security.auth.module.Krb5LoginModule required
+     useKeyTab=true
+     keyTab=&quot;/etc/security/keytabs/solr.keytab&quot;
+     storeKey=true
+     useTicketCache=true
+     debug=true
+     principal=&quot;solr/&lt;hostname&gt;@EXAMPLE.COM&quot;;
+   };
+</code></pre><ul>
+<li><p>&#x5C06;<code>/etc/solr/conf/solr_jaas.conf</code>&#x590D;&#x5236;&#x5230;&#x8FD0;&#x884C;Solr&#x7684;&#x6240;&#x6709;&#x4E3B;&#x673A;&#x3002;</p>
+</li>
+<li><p>&#x5728;<code>$SOLR_INSTALL_HOME/bin/</code>&#x4E2D;&#x7F16;&#x8F91;<code>solr.in.sh</code></p>
+</li>
+</ul>
+<pre><code>vi $SOLR_INSTALL_HOME/bin/solr.in.sh
+
+   SOLR_JAAS_FILE=/etc/solr/conf/solr_jaas.conf
+   SOLR_HOST=`hostname -f`
+   ZK_HOST=&quot;$ZK_HOST1:2181,$ZK_HOST2:2181,$ZK_HOST3:2181/solr&quot;
+   KERBEROS_REALM=&quot;EXAMPLE.COM&quot;
+   SOLR_KEYTAB=/etc/solr/conf/solr.keytab
+   SOLR_KERB_PRINCIPAL=HTTP@${KERBEROS_REALM}
+   SOLR_KERB_KEYTAB=/etc/solr/conf/HTTP.keytab
+   SOLR_AUTHENTICATION_CLIENT_CONFIGURER=&quot;org.apache.solr.client.solrj.impl.Krb5HttpClientConfigurer&quot;
+   SOLR_AUTHENTICATION_OPTS=&quot; -DauthenticationPlugin=org.apache.solr.security.KerberosPlugin -Djava.security.auth.login.config=${SOLR_JAAS_FILE} -Dsolr.kerberos.principal=${SOLR_KERB_PRINCIPAL} -Dsolr.kerberos.keytab=${SOLR_KERB_KEYTAB} -Dsolr.kerberos.cookie.domain=${SOLR_HOST} -Dhost=${SOLR_HOST} -Dsolr.kerberos.name.rules=DEFAULT&quot;
+</code></pre><ul>
+<li>&#x5C06;solr.in.sh&#x590D;&#x5236;&#x5230;&#x8FD0;&#x884C;Solr&#x7684;&#x6240;&#x6709;&#x4E3B;&#x673A;&#x3002;</li>
+<li>&#x8BBE;&#x7F6E;Solr&#x4EE5;&#x901A;&#x8FC7;&#x4E0A;&#x4F20;<code>security.json</code>&#x6765;&#x4F7F;&#x7528;Kerberos&#x63D2;&#x4EF6;&#x3002;</li>
+</ul>
+<pre><code>   $SOLR_INSTALL_HOME/server/scripts/cloud-scripts/zkcli.sh -zkhost &lt;zk host&gt;:2181 -cmd put /security.json &apos;{&quot;authentication&quot;:{&quot;class&quot;: &quot;org.apache.solr.security.KerberosPlugin&quot;}}&apos;
+</code></pre><ul>
+<li>&#x542F;&#x52A8;Solr:
+```
+ $SOLR_INSTALL_HOME/bin/solr start -cloud -z $ZK_HOST1:2181,$ZK_HOST2:2181,$ZK_HOST3:2181 -noprompt</li>
+</ul>
+<pre><code>
+- &#x6D4B;&#x8BD5;Solr:
+</code></pre><p> kinit -k -t /etc/security/keytabs/HTTP.keytab HTTP/&lt;host&gt;@EXAMPLE.COM
+   curl --negotiate -u : &quot;http://<host>:8983/solr/&quot;
+```</host></p>
+<ul>
+<li>&#x5728;Solr&#x4E2D;&#x521B;&#x5EFA;&#x4E0E;Atlas&#x4F7F;&#x7528;&#x7684;&#x7D22;&#x5F15;&#x76F8;&#x5BF9;&#x5E94;&#x7684;&#x96C6;&#x5408;&#xFF0C;&#x5E76;&#x5C06;Atlas&#x914D;&#x7F6E;&#x66F4;&#x6539;&#x4E3A;&#x6307;&#x5411;Solr&#x5B9E;&#x4F8B;&#x8BBE;&#x7F6E;&#xFF0C;&#x53C2;&#x8003;&#x6B64;&#x5904; <a href="https://atlas.apache.org/InstallationSteps.html" target="_blank">&#x5B89;&#x88C5;&#x6B65;&#x9AA4;</a>&#x3002;</li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="05.术语.html" class="navigation navigation-prev " aria-label="Previous page: 05-术语表​">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="07.认证.html" class="navigation navigation-next " aria-label="Next page: 07-认证">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"06-安全","level":"1.7","depth":1,"next":{"title":"07-认证","level":"1.8","depth":1,"path":"07.认证.md","ref":"07.认证.md","articles":[]},"previous":{"title":"05-术语表​","level":"1.6","depth":1,"path":"05.术语.md","ref":"05.术语.md","articles":[]},"dir":"ltr"},"config":{"plugins":["sharing","splitter","-expandable-chapters-small","anchors","github","github-buttons","-donate","sharing-plus","anchor-navigation-ex","favicon","livereload"],"styles":{"website":"/styles/website.css"},"pluginsConfig":{"github":{"url":"https://github.com/mantoudev"},"livereload":{},"splitter":{},"search":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"favicon":{"shortcut":"/source/images/favicon.jpg","bookmark":"/source/images/favicon.jpg","appleTouch":"/source/images/apple-touch-icon.jpg","appleTouchMore":{"120x120":"/source/images/apple-touch-icon.jpg","180x180":"/source/images/apple-touch-icon.jpg"}},"github-buttons":{"buttons":[{"user":"mantou","repo":"atlas_cn","type":"star","size":"small","count":true}]},"sharing":{"qq":false,"all":["google","facebook","weibo","twitter","qq","qzone","linkedin","pocket"],"douban":false,"facebook":false,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","author":"mantou","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Mantou Book","language":"zh-hans","links":{"sidebar":{"MantouDev":"https://mantoudev.com"}},"gitbook":"3.2.3","description":"吭哧吭哧"},"file":{"path":"06.安全.md","mtime":"2018-11-30T08:54:45.173Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-30T08:57:23.654Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

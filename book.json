@@ -1,0 +1,80 @@
+{
+    "title": "Mantou Book",
+    "author": "mantou",
+    "description": "吭哧吭哧",
+    "language": "zh-hans",
+    "gitbook": "3.2.3",
+    "styles": {
+        "website": "/styles/website.css"
+    },
+    "structure": {
+        "readme": "README.md"
+    },
+    "links": {
+        "sidebar": {
+            "MantouDev": "https://mantoudev.com"
+        }
+    },
+    "plugins": [
+        "sharing",
+        "splitter",
+        "-expandable-chapters-small",
+        "anchors",
+        "github",
+        "github-buttons",
+        "-donate",
+        "sharing-plus",
+        "anchor-navigation-ex",
+        "favicon"
+          ],
+    "pluginsConfig": {
+        "github": {
+            "url": "https://github.com/mantoudev"
+        },
+        "github-buttons": {
+            "buttons": [{
+                "user": "mantou",
+                "repo": "atlas_cn",
+                "type": "star",
+                "size": "small",
+                "count": true
+                }
+            ]
+        },
+        "sharing": {
+            "douban": false,
+            "facebook": false,
+            "google": false,
+            "hatenaBookmark": false,
+            "instapaper": false,
+            "line": false,
+            "linkedin": false,
+            "messenger": false,
+            "pocket": false,
+            "qq": false,
+            "qzone": false,
+            "stumbleupon": false,
+            "twitter": false,
+            "viber": false,
+            "vk": false,
+            "weibo": false,
+            "whatsapp": false,
+            "all": [
+                "google", "facebook", "weibo", "twitter",
+                "qq", "qzone", "linkedin", "pocket"
+            ]
+        },
+        "anchor-navigation-ex": {
+            "showLevel": false
+        },
+        "favicon":{
+            "shortcut": "/source/images/favicon.jpg",
+            "bookmark": "/source/images/favicon.jpg",
+            "appleTouch": "/source/images/apple-touch-icon.jpg",
+            "appleTouchMore": {
+                "120x120": "/source/images/apple-touch-icon.jpg",
+                "180x180": "/source/images/apple-touch-icon.jpg"
+            }
+        }
+    }
+}
