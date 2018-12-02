@@ -1,0 +1,596 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>十一、通知 · Mantou Book</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="mantou">
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-donate/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-disqus/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="10.配置Atlas.html" />
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"mantoudev","repo":"atlas_cn","type":"star","size":"small","count":true}]};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://mantoudev.com" target="_blank" class="custom-link">MantouDev</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        <li class="header">Apache Atlas开发指南(中文版)</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="01.高级架构.html">
+            
+                <a href="01.高级架构.html">
+            
+                    
+                    一、高级架构​
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="02.类型系统.html">
+            
+                <a href="02.类型系统.html">
+            
+                    
+                    二、类型系统​
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="03.基本搜索.html">
+            
+                <a href="03.基本搜索.html">
+            
+                    
+                    三、基本搜索
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="04.高级搜索.html">
+            
+                <a href="04.高级搜索.html">
+            
+                    
+                    四、高级搜索
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="05.术语.html">
+            
+                <a href="05.术语.html">
+            
+                    
+                    五、术语​
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="06.安全.html">
+            
+                <a href="06.安全.html">
+            
+                    
+                    六、安全
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="07.认证.html">
+            
+                <a href="07.认证.html">
+            
+                    
+                    七、认证
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="08.授权模型.html">
+            
+                <a href="08.授权模型.html">
+            
+                    
+                    八、Atlas授权模型
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="8.1 简单授权.html">
+            
+                <a href="8.1 简单授权.html">
+            
+                    
+                    8.1 配置Atlas Simple Authorizer
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="8.2 Ranger授权.html">
+            
+                <a href="8.2 Ranger授权.html">
+            
+                    
+                    8.2 配置Atlas Ranger Authorizer
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="09.分类传播.html">
+            
+                <a href="09.分类传播.html">
+            
+                    
+                    九、分类传播​
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="10.配置Atlas.html">
+            
+                <a href="10.配置Atlas.html">
+            
+                    
+                    十、配置Atlas属性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.12" data-path="11.通知.html">
+            
+                <a href="11.通知.html">
+            
+                    
+                    十一、通知
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" >
+            
+                <span>
+            
+                    
+                    十二、Hook & Bridge
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1" data-path="12.1 HBase Hook & Bridge.html">
+            
+                <a href="12.1 HBase Hook & Bridge.html">
+            
+                    
+                    12.1 HBase Hook＆Bridge
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.2" data-path="12.2 Hive Hook & Bridge.html">
+            
+                <a href="12.2 Hive Hook & Bridge.html">
+            
+                    
+                    12.2 Hive Hook＆Bridge
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.3" data-path="12.3 Sqoop Hook.html">
+            
+                <a href="12.3 Sqoop Hook.html">
+            
+                    
+                    12.3 Sqoop Hook
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.4" data-path="12.4 Storm Hook.html">
+            
+                <a href="12.4 Storm Hook.html">
+            
+                    
+                    12.4 Storm Hook
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.5" data-path="12.5 Kafka Bridge.html">
+            
+                <a href="12.5 Kafka Bridge.html">
+            
+                    
+                    12.5 Kafka Bridge
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="13.容错和高可用选项.html">
+            
+                <a href="13.容错和高可用选项.html">
+            
+                    
+                    十三、容错和高可用选项
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >十一、通知</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#&#x901A;&#x77E5;"><b></b>&#x901A;&#x77E5;</a></li><ul><li><span class="title-icon "></span><a href="#1-atlas&#x53D1;&#x51FA;&#x7684;&#x901A;&#x77E5;"><b></b>1. Atlas&#x53D1;&#x51FA;&#x7684;&#x901A;&#x77E5;</a></li><ul><li><span class="title-icon "></span><a href="#11-notifications---v2-apache-atlas-version-10"><b></b>1.1 Notifications - V2: Apache Atlas version 1.0</a></li><li><span class="title-icon "></span><a href="#12-notifications---v1-apache-atlas-version-08x-and-earlier"><b></b>1.2 Notifications - V1: Apache Atlas version 0.8.x and earlier</a></li></ul><li><span class="title-icon "></span><a href="#2&#x53D1;&#x9001;&#x7ED9;atlas&#x7684;&#x901A;&#x77E5;"><b></b>2.&#x53D1;&#x9001;&#x7ED9;Atlas&#x7684;&#x901A;&#x77E5;</a></li></ul></ul></div><a href="#&#x901A;&#x77E5;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x901A;&#x77E5;"><a name="&#x901A;&#x77E5;" class="anchor-navigation-ex-anchor" href="#&#x901A;&#x77E5;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x901A;&#x77E5;" class="plugin-anchor" href="#&#x901A;&#x77E5;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x901A;&#x77E5;</h1>
+<h2 id="1-atlas&#x53D1;&#x51FA;&#x7684;&#x901A;&#x77E5;"><a name="1-atlas&#x53D1;&#x51FA;&#x7684;&#x901A;&#x77E5;" class="anchor-navigation-ex-anchor" href="#1-atlas&#x53D1;&#x51FA;&#x7684;&#x901A;&#x77E5;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="1-atlas&#x53D1;&#x51FA;&#x7684;&#x901A;&#x77E5;" class="plugin-anchor" href="#1-atlas&#x53D1;&#x51FA;&#x7684;&#x901A;&#x77E5;"><i class="fa fa-link" aria-hidden="true"></i></a>1. Atlas&#x53D1;&#x51FA;&#x7684;&#x901A;&#x77E5;</h2>
+<p>Apache Atlas&#x5C06;&#x6709;&#x5173;&#x5143;&#x6570;&#x636E;&#x66F4;&#x6539;&#x7684;&#x901A;&#x77E5;&#x53D1;&#x9001;&#x5230;&#x540D;&#x4E3A;<code>ATLAS_ENTITIES</code>&#x7684;Kafka&#x4E3B;&#x9898;&#x3002;&#x5BF9;&#x5143;&#x6570;&#x636E;&#x66F4;&#x6539;&#x611F;&#x5174;&#x8DA3;&#x7684;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x53EF;&#x4EE5;&#x76D1;&#x89C6;&#x8FD9;&#x4E9B;&#x901A;&#x77E5;&#x4F8B;&#x5982;&#xFF0C;Apache Ranger&#x5904;&#x7406;&#x8FD9;&#x4E9B;&#x901A;&#x77E5;&#x4EE5;&#x6839;&#x636E;&#x5206;&#x7C7B;&#x6388;&#x6743;&#x6570;&#x636E;&#x8BBF;&#x95EE;&#x3002;</p>
+<h3 id="11-notifications---v2-apache-atlas-version-10"><a name="11-notifications---v2-apache-atlas-version-10" class="anchor-navigation-ex-anchor" href="#11-notifications---v2-apache-atlas-version-10"><i class="fa fa-link" aria-hidden="true"></i></a><a name="11-notifications---v2-apache-atlas-version-10" class="plugin-anchor" href="#11-notifications---v2-apache-atlas-version-10"><i class="fa fa-link" aria-hidden="true"></i></a>1.1 Notifications - V2: Apache Atlas version 1.0</h3>
+<p>Apache Atlas 1.0&#x53D1;&#x9001;&#x6709;&#x5173;&#x5143;&#x6570;&#x636E;&#x7684;&#x4EE5;&#x4E0B;&#x64CD;&#x4F5C;&#x7684;&#x901A;&#x77E5;&#x3002;</p>
+<pre><code>   ENTITY_CREATE:         sent when an entity instance is created
+   ENTITY_UPDATE:         sent when an entity instance is updated
+   ENTITY_DELETE:         sent when an entity instance is deleted
+   CLASSIFICATION_ADD:    sent when classifications are added to an entity instance
+   CLASSIFICATION_UPDATE: sent when classifications of an entity instance are updated
+   CLASSIFICATION_DELETE: sent when classifications are removed from an entity instance
+</code></pre><p>&#x901A;&#x77E5;&#x5305;&#x62EC;&#x4EE5;&#x4E0B;&#x6570;&#x636E;&#x3002;</p>
+<pre><code>   AtlasEntity               entity;
+   OperationType             operationType;
+   List&lt;AtlasClassification&gt; classifications;
+</code></pre><h3 id="12-notifications---v1-apache-atlas-version-08x-and-earlier"><a name="12-notifications---v1-apache-atlas-version-08x-and-earlier" class="anchor-navigation-ex-anchor" href="#12-notifications---v1-apache-atlas-version-08x-and-earlier"><i class="fa fa-link" aria-hidden="true"></i></a><a name="12-notifications---v1-apache-atlas-version-08x-and-earlier" class="plugin-anchor" href="#12-notifications---v1-apache-atlas-version-08x-and-earlier"><i class="fa fa-link" aria-hidden="true"></i></a>1.2 Notifications - V1: Apache Atlas version 0.8.x and earlier</h3>
+<p>Apache Atlas&#x7248;&#x672C;0.8.x&#x53CA;&#x66F4;&#x65E9;&#x7248;&#x672C;&#x7684;&#x901A;&#x77E5;&#x7684;&#x5185;&#x5BB9;&#x683C;&#x5F0F;&#x4E0D;&#x540C;&#xFF0C;&#x8BE6;&#x60C5;&#x5982;&#x4E0B;&#x3002;</p>
+<p><strong>&#x64CD;&#x4F5C;</strong></p>
+<pre><code>   ENTITY_CREATE: sent when an entity instance is created
+   ENTITY_UPDATE: sent when an entity instance is updated
+   ENTITY_DELETE: sent when an entity instance is deleted
+   TRAIT_ADD:     sent when classifications are added to an entity instance
+   TRAIT_UPDATE:  sent when classifications of an entity instance are updated
+   TRAIT_DELETE:  sent when classifications are removed from an entity instance
+</code></pre><p>&#x901A;&#x77E5;&#x5305;&#x62EC;&#x4EE5;&#x4E0B;&#x6570;&#x636E;&#x3002;</p>
+<pre><code>  Referenceable entity;
+  OperationType operationType;
+  List&lt;Struct&gt;  traits;
+</code></pre><p>Apache Atlas 1.0&#x53EF;&#x4EE5;&#x914D;&#x7F6E;&#x4E3A;&#x4EE5;&#x65E7;&#x7248;&#x672C;&#x683C;&#x5F0F;&#x53D1;&#x9001;&#x901A;&#x77E5;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x6700;&#x65B0;&#x7248;&#x672C;&#x683C;&#x5F0F;&#x3002;&#x8FD9;&#x5BF9;&#x4E8E;&#x5C1A;&#x672A;&#x51C6;&#x5907;&#x597D;&#x4EE5;&#x6700;&#x65B0;&#x7248;&#x672C;&#x683C;&#x5F0F;&#x5904;&#x7406;&#x901A;&#x77E5;&#x7684;&#x90E8;&#x7F72;&#x975E;&#x5E38;&#x6709;&#x7528;&#x3002;&#x8981;&#x914D;&#x7F6E;Apache Atlas 1.0&#x4EE5;&#x65E9;&#x671F;&#x7248;&#x672C;&#x683C;&#x5F0F;&#x53D1;&#x9001;&#x901A;&#x77E5;&#xFF0C;&#x8BF7;&#x5728;<code>atlas-application.properties</code>&#x4E2D;&#x8BBE;&#x7F6E;&#x4EE5;&#x4E0B;&#x914D;&#x7F6E;&#xFF1A;</p>
+<pre><code>atlas.notification.entity.version=v1
+</code></pre><h2 id="2&#x53D1;&#x9001;&#x7ED9;atlas&#x7684;&#x901A;&#x77E5;"><a name="2&#x53D1;&#x9001;&#x7ED9;atlas&#x7684;&#x901A;&#x77E5;" class="anchor-navigation-ex-anchor" href="#2&#x53D1;&#x9001;&#x7ED9;atlas&#x7684;&#x901A;&#x77E5;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="2&#x53D1;&#x9001;&#x7ED9;atlas&#x7684;&#x901A;&#x77E5;" class="plugin-anchor" href="#2&#x53D1;&#x9001;&#x7ED9;atlas&#x7684;&#x901A;&#x77E5;"><i class="fa fa-link" aria-hidden="true"></i></a>2.&#x53D1;&#x9001;&#x7ED9;Atlas&#x7684;&#x901A;&#x77E5;</h2>
+<p>&#x901A;&#x8FC7;&#x5411;Kafka&#x4E3B;&#x9898;<code>ATLAS_HOOK</code>&#x53D1;&#x9001;&#x901A;&#x77E5;&#xFF0C;&#x53EF;&#x4EE5;&#x5411;Apache Atlas&#x901A;&#x77E5;&#x5143;&#x6570;&#x636E;&#x548C;&#x8840;&#x7F18;&#x7684;&#x4FEE;&#x6539;&#x3002; Apache Hive/Apache HBase/Apache Storm/Apache Sqoop&#x7684;Atlas hook&#x4F7F;&#x7528;&#x6B64;&#x673A;&#x5236;&#x5411;Apache Atlas&#x901A;&#x77E5;&#x611F;&#x5174;&#x8DA3;&#x7684;&#x4E8B;&#x4EF6;&#x3002;</p>
+<pre><code>ENTITY_CREATE            : create an entity. For more details, refer to Java class HookNotificationV1.EntityCreateRequest
+ENTITY_FULL_UPDATE       : update an entity. For more details, refer to Java class HookNotificationV1.EntityUpdateRequest
+ENTITY_PARTIAL_UPDATE    : update specific attributes of an entity. For more details, refer to HookNotificationV1.EntityPartialUpdateRequest
+ENTITY_DELETE            : delete an entity. For more details, refer to Java class HookNotificationV1.EntityDeleteRequest
+ENTITY_CREATE_V2         : create an entity. For more details, refer to Java class HookNotification.EntityCreateRequestV2
+ENTITY_FULL_UPDATE_V2    : update an entity. For more details, refer to Java class HookNotification.EntityUpdateRequestV2
+ENTITY_PARTIAL_UPDATE_V2 : update specific attributes of an entity. For more details, refer to HookNotification.EntityPartialUpdateRequestV2
+ENTITY_DELETE_V2         : delete one or more entities. For more details, refer to Java class HookNotification.EntityDeleteRequestV2
+</code></pre>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="10.配置Atlas.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 十、配置Atlas属性">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"十一、通知","level":"1.12","depth":1,"next":{"title":"十二、Hook & Bridge","level":"1.13","depth":1,"ref":"","articles":[{"title":"12.1 HBase Hook＆Bridge","level":"1.13.1","depth":2,"path":"12.1 HBase Hook & Bridge.md","ref":"12.1 HBase Hook & Bridge.md","articles":[]},{"title":"12.2 Hive Hook＆Bridge","level":"1.13.2","depth":2,"path":"12.2 Hive Hook & Bridge.md","ref":"12.2 Hive Hook & Bridge.md","articles":[]},{"title":"12.3 Sqoop Hook","level":"1.13.3","depth":2,"path":"12.3 Sqoop Hook.md","ref":"12.3 Sqoop Hook.md","articles":[]},{"title":"12.4 Storm Hook","level":"1.13.4","depth":2,"path":"12.4 Storm Hook.md","ref":"12.4 Storm Hook.md","articles":[]},{"title":"12.5 Kafka Bridge","level":"1.13.5","depth":2,"path":"12.5 Kafka Bridge.md","ref":"12.5 Kafka Bridge.md","articles":[]}]},"previous":{"title":"十、配置Atlas属性","level":"1.11","depth":1,"path":"10.配置Atlas.md","ref":"10.配置Atlas.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","splitter","-expandable-chapters-small","anchors","github","github-buttons","donate","sharing-plus","anchor-navigation-ex","-favicon","ga","disqus"],"styles":{"website":"/styles/website.css"},"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"mantoudev"},"github":{"url":"https://github.com/mantoudev"},"splitter":{},"search":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"donate":{"alipay":"https://mantoudev.com/images/alipay.jpg","alipayText":"支付宝打赏","button":"赏","title":"","wechat":"https://mantoudev.com/images/wechatpay.jpg","wechatText":"微信打赏"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"github-buttons":{"buttons":[{"user":"mantoudev","repo":"atlas_cn","type":"star","size":"small","count":true}]},"ga":{"configuration":"auto","token":"UA-129870378-1"},"sharing":{"qq":false,"all":["google","facebook","weibo","twitter","qq","qzone","linkedin","pocket"],"douban":false,"facebook":false,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","author":"mantou","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Mantou Book","language":"zh-hans","links":{"sidebar":{"MantouDev":"https://mantoudev.com"}},"gitbook":"3.2.3","description":"吭哧吭哧"},"file":{"path":"11.通知.md","mtime":"2018-12-01T13:49:30.569Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-12-02T09:34:36.806Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-donate/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-ga/plugin.js"></script>
+        
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.16.1/URI.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-disqus/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

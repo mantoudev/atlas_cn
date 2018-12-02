@@ -16,32 +16,21 @@
         }
     },
     "plugins": [
-        "sharing",
+        "-sharing",
         "splitter",
         "-expandable-chapters-small",
         "anchors",
         "github",
         "github-buttons",
-        "-donate",
+        "donate",
         "sharing-plus",
         "anchor-navigation-ex",
-        "favicon"
+        "-favicon",
+        "ga",
+        "disqus"
           ],
     "pluginsConfig": {
-        "github": {
-            "url": "https://github.com/mantoudev"
-        },
-        "github-buttons": {
-            "buttons": [{
-                "user": "mantou",
-                "repo": "atlas_cn",
-                "type": "star",
-                "size": "small",
-                "count": true
-                }
-            ]
-        },
-        "sharing": {
+      "sharing": {
             "douban": false,
             "facebook": false,
             "google": false,
@@ -64,17 +53,35 @@
                 "qq", "qzone", "linkedin", "pocket"
             ]
         },
+        "github": {
+            "url": "https://github.com/mantoudev"
+        },
+        "github-buttons": {
+            "buttons": [{
+                "user": "mantoudev",
+                "repo": "atlas_cn",
+                "type": "star",
+                "size": "small",
+                "count": true
+                }
+            ]
+        },
         "anchor-navigation-ex": {
             "showLevel": false
         },
-        "favicon":{
-            "shortcut": "/source/images/favicon.jpg",
-            "bookmark": "/source/images/favicon.jpg",
-            "appleTouch": "/source/images/apple-touch-icon.jpg",
-            "appleTouchMore": {
-                "120x120": "/source/images/apple-touch-icon.jpg",
-                "180x180": "/source/images/apple-touch-icon.jpg"
-            }
-        }
+        "donate": {
+            "wechat": "https://mantoudev.com/images/wechatpay.jpg",
+            "alipay": "https://mantoudev.com/images/alipay.jpg",
+            "title": "",
+            "button": "赏",
+            "alipayText": "支付宝打赏",
+            "wechatText": "微信打赏"
+        },
+        "ga":{
+            "token": "UA-129870378-1"
+        },
+        "disqus": {
+          "shortName": "mantoudev"
+      }
     }
 }

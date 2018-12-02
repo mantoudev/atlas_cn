@@ -1,0 +1,714 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>十、配置Atlas属性 · Mantou Book</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="mantou">
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-donate/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-disqus/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="11.通知.html" />
+    
+    
+    <link rel="prev" href="09.分类传播.html" />
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"mantoudev","repo":"atlas_cn","type":"star","size":"small","count":true}]};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://mantoudev.com" target="_blank" class="custom-link">MantouDev</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        <li class="header">Apache Atlas开发指南(中文版)</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="01.高级架构.html">
+            
+                <a href="01.高级架构.html">
+            
+                    
+                    一、高级架构​
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="02.类型系统.html">
+            
+                <a href="02.类型系统.html">
+            
+                    
+                    二、类型系统​
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="03.基本搜索.html">
+            
+                <a href="03.基本搜索.html">
+            
+                    
+                    三、基本搜索
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="04.高级搜索.html">
+            
+                <a href="04.高级搜索.html">
+            
+                    
+                    四、高级搜索
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="05.术语.html">
+            
+                <a href="05.术语.html">
+            
+                    
+                    五、术语​
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="06.安全.html">
+            
+                <a href="06.安全.html">
+            
+                    
+                    六、安全
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="07.认证.html">
+            
+                <a href="07.认证.html">
+            
+                    
+                    七、认证
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="08.授权模型.html">
+            
+                <a href="08.授权模型.html">
+            
+                    
+                    八、Atlas授权模型
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="8.1 简单授权.html">
+            
+                <a href="8.1 简单授权.html">
+            
+                    
+                    8.1 配置Atlas Simple Authorizer
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="8.2 Ranger授权.html">
+            
+                <a href="8.2 Ranger授权.html">
+            
+                    
+                    8.2 配置Atlas Ranger Authorizer
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="09.分类传播.html">
+            
+                <a href="09.分类传播.html">
+            
+                    
+                    九、分类传播​
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.11" data-path="10.配置Atlas.html">
+            
+                <a href="10.配置Atlas.html">
+            
+                    
+                    十、配置Atlas属性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="11.通知.html">
+            
+                <a href="11.通知.html">
+            
+                    
+                    十一、通知
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" >
+            
+                <span>
+            
+                    
+                    十二、Hook & Bridge
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1" data-path="12.1 HBase Hook & Bridge.html">
+            
+                <a href="12.1 HBase Hook & Bridge.html">
+            
+                    
+                    12.1 HBase Hook＆Bridge
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.2" data-path="12.2 Hive Hook & Bridge.html">
+            
+                <a href="12.2 Hive Hook & Bridge.html">
+            
+                    
+                    12.2 Hive Hook＆Bridge
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.3" data-path="12.3 Sqoop Hook.html">
+            
+                <a href="12.3 Sqoop Hook.html">
+            
+                    
+                    12.3 Sqoop Hook
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.4" data-path="12.4 Storm Hook.html">
+            
+                <a href="12.4 Storm Hook.html">
+            
+                    
+                    12.4 Storm Hook
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.5" data-path="12.5 Kafka Bridge.html">
+            
+                <a href="12.5 Kafka Bridge.html">
+            
+                    
+                    12.5 Kafka Bridge
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="13.容错和高可用选项.html">
+            
+                <a href="13.容错和高可用选项.html">
+            
+                    
+                    十三、容错和高可用选项
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >十、配置Atlas属性</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#&#x914D;&#x7F6E;apache-atlas---&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x5C5E;&#x6027;"><b></b>&#x914D;&#x7F6E;Apache Atlas - &#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x5C5E;&#x6027;</a></li><ul><li><span class="title-icon "></span><a href="#1-&#x56FE;&#x914D;&#x7F6E;"><b></b>1. &#x56FE;&#x914D;&#x7F6E;</a></li><ul><li><span class="title-icon "></span><a href="#11-&#x56FE;&#x6301;&#x4E45;&#x6027;&#x5F15;&#x64CE;----hbase"><b></b>1.1 &#x56FE;&#x6301;&#x4E45;&#x6027;&#x5F15;&#x64CE; -  HBase</a></li><li><span class="title-icon "></span><a href="#12-&#x56FE;&#x641C;&#x7D22;&#x5F15;&#x64CE;"><b></b>1.2 &#x56FE;&#x641C;&#x7D22;&#x5F15;&#x64CE;</a></li></ul><li><span class="title-icon "></span><a href="#2-&#x641C;&#x7D22;&#x914D;&#x7F6E;"><b></b>2. &#x641C;&#x7D22;&#x914D;&#x7F6E;</a></li><li><span class="title-icon "></span><a href="#3-&#x901A;&#x77E5;&#x914D;&#x7F6E;"><b></b>3. &#x901A;&#x77E5;&#x914D;&#x7F6E;</a></li><li><span class="title-icon "></span><a href="#4-client-&#x914D;&#x7F6E;"><b></b>4. Client &#x914D;&#x7F6E;</a></li><li><span class="title-icon "></span><a href="#5-&#x5B89;&#x5168;&#x5C5E;&#x6027;"><b></b>5. &#x5B89;&#x5168;&#x5C5E;&#x6027;</a></li><ul><li><span class="title-icon "></span><a href="#51-ssl-&#x914D;&#x7F6E;"><b></b>5.1 SSL &#x914D;&#x7F6E;</a></li></ul><li><span class="title-icon "></span><a href="#6-&#x9AD8;&#x53EF;&#x7528;&#x5C5E;&#x6027;"><b></b>6. &#x9AD8;&#x53EF;&#x7528;&#x5C5E;&#x6027;</a></li><li><span class="title-icon "></span><a href="#7-server-&#x5C5E;&#x6027;"><b></b>7. Server &#x5C5E;&#x6027;</a></li><li><span class="title-icon "></span><a href="#8-&#x6027;&#x80FD;&#x914D;&#x7F6E;&#x9879;"><b></b>8. &#x6027;&#x80FD;&#x914D;&#x7F6E;&#x9879;</a></li><ul><li><span class="title-icon "></span><a href="#81-&#x8BB0;&#x5F55;&#x6027;&#x80FD;&#x6307;&#x6807;"><b></b>8.1 &#x8BB0;&#x5F55;&#x6027;&#x80FD;&#x6307;&#x6807;</a></li></ul></ul></ul></div><a href="#&#x914D;&#x7F6E;apache-atlas---&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x5C5E;&#x6027;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x914D;&#x7F6E;apache-atlas---&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x5C5E;&#x6027;"><a name="&#x914D;&#x7F6E;apache-atlas---&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x5C5E;&#x6027;" class="anchor-navigation-ex-anchor" href="#&#x914D;&#x7F6E;apache-atlas---&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x5C5E;&#x6027;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x914D;&#x7F6E;apache-atlas---&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x5C5E;&#x6027;" class="plugin-anchor" href="#&#x914D;&#x7F6E;apache-atlas---&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x5C5E;&#x6027;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x914D;&#x7F6E;Apache Atlas - &#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x5C5E;&#x6027;</h1>
+<p>Atlas&#x4E2D;&#x7684;&#x6240;&#x6709;&#x914D;&#x7F6E;&#x90FD;&#x4F7F;&#x7528;java&#x5C5E;&#x6027;&#x6837;&#x5F0F;&#x914D;&#x7F6E;&#x3002;&#x4E3B;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x662F;<code>atlas-application.properties</code>&#xFF0C;&#x5B83;&#x4F4D;&#x4E8E;&#x90E8;&#x7F72;&#x8DEF;&#x5F84;&#x7684;<code>conf</code>&#x76EE;&#x5F55;&#x4E2D;&#x3002;&#x5B83;&#x7531;&#x4EE5;&#x4E0B;&#x90E8;&#x5206;&#x7EC4;&#x6210;&#xFF1A;</p>
+<h2 id="1-&#x56FE;&#x914D;&#x7F6E;"><a name="1-&#x56FE;&#x914D;&#x7F6E;" class="anchor-navigation-ex-anchor" href="#1-&#x56FE;&#x914D;&#x7F6E;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="1-&#x56FE;&#x914D;&#x7F6E;" class="plugin-anchor" href="#1-&#x56FE;&#x914D;&#x7F6E;"><i class="fa fa-link" aria-hidden="true"></i></a>1. &#x56FE;&#x914D;&#x7F6E;</h2>
+<h3 id="11-&#x56FE;&#x6301;&#x4E45;&#x6027;&#x5F15;&#x64CE;----hbase"><a name="11-&#x56FE;&#x6301;&#x4E45;&#x6027;&#x5F15;&#x64CE;----hbase" class="anchor-navigation-ex-anchor" href="#11-&#x56FE;&#x6301;&#x4E45;&#x6027;&#x5F15;&#x64CE;----hbase"><i class="fa fa-link" aria-hidden="true"></i></a><a name="11-&#x56FE;&#x6301;&#x4E45;&#x6027;&#x5F15;&#x64CE;----hbase" class="plugin-anchor" href="#11-&#x56FE;&#x6301;&#x4E45;&#x6027;&#x5F15;&#x64CE;----hbase"><i class="fa fa-link" aria-hidden="true"></i></a>1.1 &#x56FE;&#x6301;&#x4E45;&#x6027;&#x5F15;&#x64CE; -  HBase</h3>
+<p>&#x8BBE;&#x7F6E;&#x4EE5;&#x4E0B;&#x5C5E;&#x6027;&#x4EE5;&#x5C06;<a href="https://atlas.apache.org/JanusGraph.html" target="_blank">JanusGraph</a>&#x914D;&#x7F6E;&#x4E3A;&#x4F7F;&#x7528;HBase&#x4F5C;&#x4E3A;&#x6301;&#x4E45;&#x6027;&#x5F15;&#x64CE;&#x3002;&#x6709;&#x5173;&#x8BE6;&#x7EC6;&#x4FE1;&#x606F;&#xFF0C;&#x8BF7;&#x53C2;&#x9605;<a href="http://docs.janusgraph.org/0.2.0/configuration.html#_hbase_caching" target="_blank">&#x8FD9;&#x91CC;</a>&#x3002;</p>
+<pre><code>atlas.graph.storage.backend=hbase
+atlas.graph.storage.hostname=&lt;ZooKeeper Quorum&gt;
+atlas.graph.storage.hbase.table=atlas
+</code></pre><p>&#x5982;&#x679C;&#x9700;&#x8981;&#x4EFB;&#x4F55;&#x8FDB;&#x4E00;&#x6B65;&#x7684;JanusGraph&#x914D;&#x7F6E;&#xFF0C;&#x8BF7;&#x5728;&#x5C5E;&#x6027;&#x540D;&#x79F0;&#x524D;&#x52A0;&#x4E0A;&#x201C;atlas.graph&#x3002;&#x201D;&#x3002;
+&#x9664;&#x4E86;&#x8BBE;&#x7F6E;&#x914D;&#x7F6E;&#x5916;&#xFF0C;&#x8BF7;&#x786E;&#x4FDD;&#x5C06;&#x73AF;&#x5883;&#x53D8;&#x91CF;<code>HBASE_CONF_DIR</code>&#x8BBE;&#x7F6E;&#x4E3A;&#x6307;&#x5411;&#x5305;&#x542B;HBase&#x914D;&#x7F6E;&#x6587;&#x4EF6;<code>hbase-site.xml</code>&#x7684;&#x76EE;&#x5F55;&#x3002;</p>
+<h3 id="12-&#x56FE;&#x641C;&#x7D22;&#x5F15;&#x64CE;"><a name="12-&#x56FE;&#x641C;&#x7D22;&#x5F15;&#x64CE;" class="anchor-navigation-ex-anchor" href="#12-&#x56FE;&#x641C;&#x7D22;&#x5F15;&#x64CE;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="12-&#x56FE;&#x641C;&#x7D22;&#x5F15;&#x64CE;" class="plugin-anchor" href="#12-&#x56FE;&#x641C;&#x7D22;&#x5F15;&#x64CE;"><i class="fa fa-link" aria-hidden="true"></i></a>1.2 &#x56FE;&#x641C;&#x7D22;&#x5F15;&#x64CE;</h3>
+<p>ATLAS&#x9700;&#x8981;&#x7D22;&#x5F15;&#x641C;&#x7D22;&#x5F15;&#x64CE;&#x3002;&#x6B64;&#x641C;&#x7D22;&#x5F15;&#x64CE;&#x4E0E;ATLAS&#x670D;&#x52A1;&#x5668;&#x548C;&#x5B58;&#x50A8;&#x540E;&#x7AEF;&#x5206;&#x5F00;&#x8FD0;&#x884C;&#x3002;&#x76EE;&#x524D;&#x4EC5;&#x652F;&#x6301;&#x4E24;&#x4E2A;&#x641C;&#x7D22;&#x5F15;&#x64CE;&#xFF1A;<code>Solr</code>&#x548C;<code>Elasticsearch</code>&#x3002;&#x9009;&#x62E9;&#x6700;&#x9002;&#x5408;&#x60A8;&#x73AF;&#x5883;&#x7684;&#x641C;&#x7D22;&#x5F15;&#x64CE;&#xFF0C;&#x5E76;&#x6309;&#x7167;&#x4E0B;&#x9762;&#x7684;&#x914D;&#x7F6E;&#x8BF4;&#x660E;&#x64CD;&#x4F5C;&#x3002;</p>
+<h4 id="1-solr"><a name="1-solr" class="anchor-navigation-ex-anchor" href="#1-solr"><i class="fa fa-link" aria-hidden="true"></i></a><a name="1-solr" class="plugin-anchor" href="#1-solr"><i class="fa fa-link" aria-hidden="true"></i></a>(1) Solr</h4>
+<p>&#x5728;&#x4E91;&#x6A21;&#x5F0F;&#x4E0B;&#x5B89;&#x88C5;Solr&#x662F;Apache Atlas&#x4F7F;&#x7528;&#x7684;&#x5148;&#x51B3;&#x6761;&#x4EF6;&#x3002;&#x8BBE;&#x7F6E;&#x4EE5;&#x4E0B;&#x5C5E;&#x6027;&#x4EE5;&#x914D;&#x7F6E;JanusGraph&#x4EE5;&#x4F7F;&#x7528;Solr&#x4F5C;&#x4E3A;&#x7D22;&#x5F15;&#x641C;&#x7D22;&#x5F15;&#x64CE;&#x3002;</p>
+<pre><code>atlas.graph.index.search.backend=solr5
+atlas.graph.index.search.solr.mode=cloud
+atlas.graph.index.search.solr.wait-searcher=true
+
+# ZK quorum setup for solr as comma separated value. Example: 10.1.6.4:2181,10.1.6.5:2181
+atlas.graph.index.search.solr.zookeeper-url=
+
+# SolrCloud Zookeeper Connection Timeout. Default value is 60000 ms
+atlas.graph.index.search.solr.zookeeper-connect-timeout=60000
+
+# SolrCloud Zookeeper Session Timeout. Default value is 60000 ms
+atlas.graph.index.search.solr.zookeeper-session-timeout=60000
+</code></pre><h4 id="2-elasticsearch"><a name="2-elasticsearch" class="anchor-navigation-ex-anchor" href="#2-elasticsearch"><i class="fa fa-link" aria-hidden="true"></i></a><a name="2-elasticsearch" class="plugin-anchor" href="#2-elasticsearch"><i class="fa fa-link" aria-hidden="true"></i></a>(2) Elasticsearch</h4>
+<p>Elasticsearch&#x662F;Apache Atlas&#x4F7F;&#x7528;&#x7684;&#x5148;&#x51B3;&#x6761;&#x4EF6;&#x3002;&#x8BBE;&#x7F6E;&#x4EE5;&#x4E0B;&#x5C5E;&#x6027;&#x4EE5;&#x914D;&#x7F6E;JanusGraph&#x4EE5;&#x4F7F;&#x7528;Elasticsearch&#x4F5C;&#x4E3A;&#x7D22;&#x5F15;&#x641C;&#x7D22;&#x5F15;&#x64CE;&#x3002;</p>
+<pre><code>atlas.graph.index.search.backend=elasticsearch
+atlas.graph.index.search.hostname=&lt;hostname(s) of the Elasticsearch master nodes comma separated&gt;
+atlas.graph.index.search.elasticsearch.client-only=true
+</code></pre><h2 id="2-&#x641C;&#x7D22;&#x914D;&#x7F6E;"><a name="2-&#x641C;&#x7D22;&#x914D;&#x7F6E;" class="anchor-navigation-ex-anchor" href="#2-&#x641C;&#x7D22;&#x914D;&#x7F6E;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="2-&#x641C;&#x7D22;&#x914D;&#x7F6E;" class="plugin-anchor" href="#2-&#x641C;&#x7D22;&#x914D;&#x7F6E;"><i class="fa fa-link" aria-hidden="true"></i></a>2. &#x641C;&#x7D22;&#x914D;&#x7F6E;</h2>
+<p>&#x641C;&#x7D22;API&#xFF08;DSL&#xFF0C;&#x57FA;&#x672C;&#x641C;&#x7D22;&#xFF0C;&#x5168;&#x6587;&#x641C;&#x7D22;&#xFF09;&#x652F;&#x6301;&#x5206;&#x9875;&#xFF0C;&#x5E76;&#x5177;&#x6709;&#x53EF;&#x9009;&#x7684;limit&#x548C;offset&#x53C2;&#x6570;&#x3002;&#x4EE5;&#x4E0B;&#x914D;&#x7F6E;&#x4E0E;&#x641C;&#x7D22;&#x5206;&#x9875;&#x6709;&#x5173;:</p>
+<pre><code># Default limit used when limit is not specified in API
+atlas.search.defaultlimit=100
+
+# Maximum limit allowed in API. Limits maximum results that can be fetched to make sure the atlas server doesn&apos;t run out of memory
+atlas.search.maxlimit=10000
+</code></pre><h2 id="3-&#x901A;&#x77E5;&#x914D;&#x7F6E;"><a name="3-&#x901A;&#x77E5;&#x914D;&#x7F6E;" class="anchor-navigation-ex-anchor" href="#3-&#x901A;&#x77E5;&#x914D;&#x7F6E;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="3-&#x901A;&#x77E5;&#x914D;&#x7F6E;" class="plugin-anchor" href="#3-&#x901A;&#x77E5;&#x914D;&#x7F6E;"><i class="fa fa-link" aria-hidden="true"></i></a>3. &#x901A;&#x77E5;&#x914D;&#x7F6E;</h2>
+<p>&#x6709;&#x5173;Kafka&#x914D;&#x7F6E;&#xFF0C;&#x8BF7;&#x53C2;&#x9605;<a href="http://kafka.apache.org/documentation.html#configuration&#x3002;&#x6240;&#x6709;Kafka&#x914D;&#x7F6E;&#x90FD;&#x5E94;&#x8BE5;&#x4EE5;&apos;atlas.kafka&apos;&#x4E3A;&#x524D;&#x7F00;&#x3002;" target="_blank">http://kafka.apache.org/documentation.html#configuration&#x3002;&#x6240;&#x6709;Kafka&#x914D;&#x7F6E;&#x90FD;&#x5E94;&#x8BE5;&#x4EE5;&apos;atlas.kafka&apos;&#x4E3A;&#x524D;&#x7F00;&#x3002;</a></p>
+<pre><code>atlas.kafka.auto.commit.enable=false
+
+# Kafka servers. Example: localhost:6667
+atlas.kafka.bootstrap.servers=
+
+atlas.kafka.hook.group.id=atlas
+
+# Zookeeper connect URL for Kafka. Example: localhost:2181
+atlas.kafka.zookeeper.connect=
+
+atlas.kafka.zookeeper.connection.timeout.ms=30000
+atlas.kafka.zookeeper.session.timeout.ms=60000
+atlas.kafka.zookeeper.sync.time.ms=20
+
+# Setup the following configurations only in test deployments where Kafka is started within Atlas in embedded mode
+# atlas.notification.embedded=true
+# atlas.kafka.data=${sys:atlas.home}/data/kafka
+
+# Setup the following two properties if Kafka is running in Kerberized mode.
+# atlas.notification.kafka.service.principal=kafka/_HOST@EXAMPLE.COM
+# atlas.notification.kafka.keytab.location=/etc/security/keytabs/kafka.service.keytab
+</code></pre><h2 id="4-client-&#x914D;&#x7F6E;"><a name="4-client-&#x914D;&#x7F6E;" class="anchor-navigation-ex-anchor" href="#4-client-&#x914D;&#x7F6E;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="4-client-&#x914D;&#x7F6E;" class="plugin-anchor" href="#4-client-&#x914D;&#x7F6E;"><i class="fa fa-link" aria-hidden="true"></i></a>4. Client &#x914D;&#x7F6E;</h2>
+<pre><code>atlas.client.readTimeoutMSecs=60000
+atlas.client.connectTimeoutMSecs=60000
+
+# URL to access Atlas server. For example: http://localhost:21000
+atlas.rest.address=
+</code></pre><h2 id="5-&#x5B89;&#x5168;&#x5C5E;&#x6027;"><a name="5-&#x5B89;&#x5168;&#x5C5E;&#x6027;" class="anchor-navigation-ex-anchor" href="#5-&#x5B89;&#x5168;&#x5C5E;&#x6027;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="5-&#x5B89;&#x5168;&#x5C5E;&#x6027;" class="plugin-anchor" href="#5-&#x5B89;&#x5168;&#x5C5E;&#x6027;"><i class="fa fa-link" aria-hidden="true"></i></a>5. &#x5B89;&#x5168;&#x5C5E;&#x6027;</h2>
+<h3 id="51-ssl-&#x914D;&#x7F6E;"><a name="51-ssl-&#x914D;&#x7F6E;" class="anchor-navigation-ex-anchor" href="#51-ssl-&#x914D;&#x7F6E;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="51-ssl-&#x914D;&#x7F6E;" class="plugin-anchor" href="#51-ssl-&#x914D;&#x7F6E;"><i class="fa fa-link" aria-hidden="true"></i></a>5.1 SSL &#x914D;&#x7F6E;</h3>
+<p>&#x4EE5;&#x4E0B;&#x5C5E;&#x6027;&#x7528;&#x4E8E;&#x6253;&#x5F00;SSL&#x529F;&#x80FD;&#x3002;</p>
+<pre><code>atlas.enableTLS=false
+</code></pre><h2 id="6-&#x9AD8;&#x53EF;&#x7528;&#x5C5E;&#x6027;"><a name="6-&#x9AD8;&#x53EF;&#x7528;&#x5C5E;&#x6027;" class="anchor-navigation-ex-anchor" href="#6-&#x9AD8;&#x53EF;&#x7528;&#x5C5E;&#x6027;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="6-&#x9AD8;&#x53EF;&#x7528;&#x5C5E;&#x6027;" class="plugin-anchor" href="#6-&#x9AD8;&#x53EF;&#x7528;&#x5C5E;&#x6027;"><i class="fa fa-link" aria-hidden="true"></i></a>6. &#x9AD8;&#x53EF;&#x7528;&#x5C5E;&#x6027;</h2>
+<p>&#x4EE5;&#x4E0B;&#x5C5E;&#x6027;&#x63CF;&#x8FF0;&#x4E86;&#x4E0E;&#x9AD8;&#x53EF;&#x7528;&#x6027;&#x76F8;&#x5173;&#x7684;&#x914D;&#x7F6E;&#x9009;&#x9879;&#xFF1A;</p>
+<pre><code># Set the following property to true, to enable High Availability. Default = false.
+atlas.server.ha.enabled=true
+
+# Specify the list of Atlas instances
+atlas.server.ids=id1,id2
+# For each instance defined above, define the host and port on which Atlas server listens.
+atlas.server.address.id1=host1.company.com:21000
+atlas.server.address.id2=host2.company.com:31000
+
+# Specify Zookeeper properties needed for HA.
+# Specify the list of services running Zookeeper servers as a comma separated list.
+atlas.server.ha.zookeeper.connect=zk1.company.com:2181,zk2.company.com:2181,zk3.company.com:2181
+
+# Specify how many times should connection try to be established with a Zookeeper cluster, in case of any connection issues.
+atlas.server.ha.zookeeper.num.retries=3
+
+# Specify how much time should the server wait before attempting connections to Zookeeper, in case of any connection issues.
+atlas.server.ha.zookeeper.retry.sleeptime.ms=1000
+
+# Specify how long a session to Zookeeper should last without inactiviy to be deemed as unreachable.
+atlas.server.ha.zookeeper.session.timeout.ms=20000
+
+# Specify the scheme and the identity to be used for setting up ACLs on nodes created in Zookeeper for HA.
+# The format of these options is &lt;scheme&gt;:&lt;identity&gt;. For more information refer to http://zookeeper.apache.org/doc/r3.2.2/zookeeperProgrammers.html#sc_ZooKeeperAccessControl.
+# The &apos;acl&apos; option allows to specify a scheme, identity pair to setup an ACL for.
+atlas.server.ha.zookeeper.acl=sasl:client@comany.com
+
+# The &apos;auth&apos; option specifies the authentication that should be used for connecting to Zookeeper.
+atlas.server.ha.zookeeper.auth=sasl:client@company.com
+
+# Since Zookeeper is a shared service that is typically used by many components,
+# it is preferable for each component to set its znodes under a namespace.
+# Specify the namespace under which the znodes should be written. Default = /apache_atlas
+atlas.server.ha.zookeeper.zkroot=/apache_atlas
+
+# Specify number of times a client should retry with an instance before selecting another active instance, or failing an operation.
+atlas.client.ha.retries=4
+# Specify interval between retries for a client.
+atlas.client.ha.sleep.interval.ms=5000
+</code></pre><h2 id="7-server-&#x5C5E;&#x6027;"><a name="7-server-&#x5C5E;&#x6027;" class="anchor-navigation-ex-anchor" href="#7-server-&#x5C5E;&#x6027;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="7-server-&#x5C5E;&#x6027;" class="plugin-anchor" href="#7-server-&#x5C5E;&#x6027;"><i class="fa fa-link" aria-hidden="true"></i></a>7. Server &#x5C5E;&#x6027;</h2>
+<pre><code># Set the following property to true, to enable the setup steps to run on each server start. Default = false.
+atlas.server.run.setup.on.start=false
+</code></pre><h2 id="8-&#x6027;&#x80FD;&#x914D;&#x7F6E;&#x9879;"><a name="8-&#x6027;&#x80FD;&#x914D;&#x7F6E;&#x9879;" class="anchor-navigation-ex-anchor" href="#8-&#x6027;&#x80FD;&#x914D;&#x7F6E;&#x9879;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="8-&#x6027;&#x80FD;&#x914D;&#x7F6E;&#x9879;" class="plugin-anchor" href="#8-&#x6027;&#x80FD;&#x914D;&#x7F6E;&#x9879;"><i class="fa fa-link" aria-hidden="true"></i></a>8. &#x6027;&#x80FD;&#x914D;&#x7F6E;&#x9879;</h2>
+<p>&#x5728;&#x7279;&#x5B9A;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x4EE5;&#x4E0B;&#x5C5E;&#x6027;&#x6765;&#x8C03;&#x6574;Atlas&#x7684;&#x6027;&#x80FD;&#xFF1A;</p>
+<pre><code># The number of times Atlas code tries to acquire a lock (to ensure consistency) while committing a transaction.
+# This should be related to the amount of concurrency expected to be supported by the server. For e.g. with retries set to 10, upto 100 threads can concurrently create types in the Atlas system.
+# If this is set to a low value (default is 3), concurrent operations might fail with a PermanentLockingException.
+atlas.graph.storage.lock.retries=10
+
+# Milliseconds to wait before evicting a cached entry. This should be &gt; atlas.graph.storage.lock.wait-time x atlas.graph.storage.lock.retries
+# If this is set to a low value (default is 10000), warnings on transactions taking too long will occur in the Atlas application log.
+atlas.graph.storage.cache.db-cache-time=120000
+
+# Minimum number of threads in the atlas web server
+atlas.webserver.minthreads=10
+
+# Maximum number of threads in the atlas web server
+atlas.webserver.maxthreads=100
+
+# Keepalive time in secs for the thread pool of the atlas web server
+atlas.webserver.keepalivetimesecs=60
+
+# Queue size for the requests(when max threads are busy) for the atlas web server
+atlas.webserver.queuesize=100
+</code></pre><h3 id="81-&#x8BB0;&#x5F55;&#x6027;&#x80FD;&#x6307;&#x6807;"><a name="81-&#x8BB0;&#x5F55;&#x6027;&#x80FD;&#x6307;&#x6807;" class="anchor-navigation-ex-anchor" href="#81-&#x8BB0;&#x5F55;&#x6027;&#x80FD;&#x6307;&#x6807;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="81-&#x8BB0;&#x5F55;&#x6027;&#x80FD;&#x6307;&#x6807;" class="plugin-anchor" href="#81-&#x8BB0;&#x5F55;&#x6027;&#x80FD;&#x6307;&#x6807;"><i class="fa fa-link" aria-hidden="true"></i></a>8.1 &#x8BB0;&#x5F55;&#x6027;&#x80FD;&#x6307;&#x6807;</h3>
+<p>&#x8981;&#x4E3A;&#x5404;&#x79CD;Atlas&#x64CD;&#x4F5C;&#xFF08;&#x5982;REST API&#x8C03;&#x7528;&#xFF0C;&#x901A;&#x77E5;&#x5904;&#x7406;&#xFF09;&#x542F;&#x7528;&#x6027;&#x80FD;&#x65E5;&#x5FD7;&#xFF0C;&#x8BF7;&#x5728;<code>atlas-log4j.xml</code>&#x4E2D;&#x8BBE;&#x7F6E;&#x4EE5;&#x4E0B;&#x5185;&#x5BB9;&#xFF1A;</p>
+<pre><code>&lt;appender name=&quot;perf_appender&quot; class=&quot;org.apache.log4j.DailyRollingFileAppender&quot;&gt;
+    &lt;param name=&quot;File&quot; value=&quot;/var/log/atlas/atlas_perf.log&quot;/&gt;
+    &lt;param name=&quot;datePattern&quot; value=&quot;&apos;.&apos;yyyy-MM-dd&quot;/&gt;
+    &lt;param name=&quot;append&quot; value=&quot;true&quot;/&gt;
+    &lt;layout class=&quot;org.apache.log4j.PatternLayout&quot;&gt;
+      &lt;param name=&quot;ConversionPattern&quot; value=&quot;%d|%t|%m%n&quot;/&gt;
+    &lt;/layout&gt;
+  &lt;/appender&gt;
+
+   &lt;logger name=&quot;org.apache.atlas.perf&quot; additivity=&quot;false&quot;&gt;
+     &lt;level value=&quot;debug&quot;/&gt;
+     &lt;appender-ref ref=&quot;perf_appender&quot;/&gt;
+   &lt;/logger&gt;
+</code></pre>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="09.分类传播.html" class="navigation navigation-prev " aria-label="Previous page: 九、分类传播​">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="11.通知.html" class="navigation navigation-next " aria-label="Next page: 十一、通知">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"十、配置Atlas属性","level":"1.11","depth":1,"next":{"title":"十一、通知","level":"1.12","depth":1,"path":"11.通知.md","ref":"11.通知.md","articles":[]},"previous":{"title":"九、分类传播​","level":"1.10","depth":1,"path":"09.分类传播.md","ref":"09.分类传播.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","splitter","-expandable-chapters-small","anchors","github","github-buttons","donate","sharing-plus","anchor-navigation-ex","-favicon","ga","disqus"],"styles":{"website":"/styles/website.css"},"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"mantoudev"},"github":{"url":"https://github.com/mantoudev"},"splitter":{},"search":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"donate":{"alipay":"https://mantoudev.com/images/alipay.jpg","alipayText":"支付宝打赏","button":"赏","title":"","wechat":"https://mantoudev.com/images/wechatpay.jpg","wechatText":"微信打赏"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"github-buttons":{"buttons":[{"user":"mantoudev","repo":"atlas_cn","type":"star","size":"small","count":true}]},"ga":{"configuration":"auto","token":"UA-129870378-1"},"sharing":{"qq":false,"all":["google","facebook","weibo","twitter","qq","qzone","linkedin","pocket"],"douban":false,"facebook":false,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","author":"mantou","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Mantou Book","language":"zh-hans","links":{"sidebar":{"MantouDev":"https://mantoudev.com"}},"gitbook":"3.2.3","description":"吭哧吭哧"},"file":{"path":"10.配置Atlas.md","mtime":"2018-12-01T13:38:37.521Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-12-02T09:34:36.806Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-donate/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-ga/plugin.js"></script>
+        
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.16.1/URI.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-disqus/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
