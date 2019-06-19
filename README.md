@@ -1,5 +1,7 @@
 # Hadoop的数据治理和元数据框架
 
+**Git Book 请查看地址：https://mantoudev.com/mantouBook/Atlas_cn/index.html**
+
 >笔者近期在和团队的小伙伴进行数据资产管理方向的探索，本书的翻译基于[Apache Atlas v1.1](https://atlas.apache.org/)版本。希望对大家有帮助，阅读过程中遇到问题欢迎留言或与我联系，欢迎交流。
 
 ## 1. 概述
